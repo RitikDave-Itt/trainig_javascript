@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded",()=>{
     let buttons  = document.getElementsByClassName("button");
     let screen = document.getElementById("screen");
-    screen.focus();
 
     
     let clr = document.getElementById("clr");
@@ -11,7 +10,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         
         button.addEventListener("click", () => {
 
-            screen.value+= button.innerHTML;
+            screen.innerText+= button.innerHTML;
             button.classList.add("blink");
 
             setTimeout(()=>{
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
     clr.addEventListener("click",()=>{
-        screen.value = "";
+        screen.innerText = "";
         clr.classList.add("blink");
 
             setTimeout(()=>{
@@ -33,12 +32,12 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     Enter.addEventListener("click",()=>{
         try{
-        screen.value =  eval(screen.value)??"undefined";
+        screen.innerText =  eval(screen.innerText)??"undefined";
         }
         catch(error){
-            screen.value = "Invalid !";
+            screen.innerText = "Invalid !";
             setTimeout(()=>{
-                screen.value = "";
+                screen.innerText = "";
 
             },500)
         }
@@ -49,7 +48,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             },100);
     })
     bkspace.addEventListener("click",()=>{
-        screen.value = screen.value.slice(0,-1);
+        screen.innerText = screen.innerText.slice(0,-1);
         bkspace.classList.add("blink");
 
             setTimeout(()=>{
@@ -60,26 +59,34 @@ document.addEventListener("DOMContentLoaded",()=>{
     document.addEventListener("keydown",(event)=>{
         if(event.key==="Enter"){
             try{
-            screen.value = eval(screen.value);
+            screen.innerText = eval(screen.innerText);
             }
             catch{
-                screen.value = "Invalid !"
+                screen.innerText = "Invalid !"
                 setTimeout(()=>{
-                    screen.value = "";
+                    screen.innerText = "";
 
                 },500);
             }
 
         }
-        else if(!isNaN(event.key)||isoperator(event.key)||event.key==="Enter"||event.key==="Backspace"){
+        else if(event.key==="Backspace"){
+            screen.innerText = screen.innerText.slice(0,-1);
+        }
+        
+        else if(!isNaN(event.key)||isoperator(event.key)){
             let key = document.getElementById(event.key);
+
+            screen.innerText+=event.key;
+            
+
 
             key.classList.add("blink");
 
             setTimeout(()=>{key.classList.remove("blink")},100);
 
         }
-        else if(isNaN(event.key)){
+        else if(!(event.ctrlKey||event.altKey||event.shiftKey||event.key=="ArrowLeft"||event.key=="ArrowRight")&&isNaN(event.key)){
             let screen = document.getElementById("screen");
             screen.classList.add("shake");
             setTimeout(()=>{

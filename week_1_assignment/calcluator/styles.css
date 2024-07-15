@@ -62,6 +62,8 @@ body{
     padding: 0px 5px 0px 5px;
     font-size: larger;
     border: #313131;
+    overflow-x: auto;
+    scrollbar-width: thin; 
 
 }
 
@@ -104,5 +106,8 @@ body{
 
 .shake{
     margin-left: 4px;
-    color: red;
+    color: white;
+    
+
 }
+

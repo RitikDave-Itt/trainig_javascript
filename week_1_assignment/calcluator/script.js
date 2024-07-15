@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     
     let clr = document.getElementById("clr");
-    let ans = document.getElementById("ans");
+    let Enter = document.getElementById("Enter");
     let bkspace = document.getElementById("backspace");
     Array.from(buttons).forEach(button => {
         
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded",()=>{
             },100);
     })
 
-    ans.addEventListener("click",()=>{
+    Enter.addEventListener("click",()=>{
         try{
         screen.value =  eval(screen.value)??"undefined";
         }
@@ -42,10 +42,10 @@ document.addEventListener("DOMContentLoaded",()=>{
 
             },500)
         }
-        ans.classList.add("blink");
+        Enter.classList.add("blink");
 
             setTimeout(()=>{
-                ans.classList.remove("blink");
+                Enter.classList.remove("blink");
             },100);
     })
     bkspace.addEventListener("click",()=>{
@@ -71,8 +71,22 @@ document.addEventListener("DOMContentLoaded",()=>{
             }
 
         }
-        else if(event.key==="Backspace"){
-            screen.value = screen.value.slice(0,-1);
+        else if(!isNaN(event.key)||isoperator(event.key)||event.key==="Enter"||event.key==="Backspace"){
+            let key = document.getElementById(event.key);
+
+            key.classList.add("blink");
+
+            setTimeout(()=>{key.classList.remove("blink")},100);
+
+        }
+        else if(isNaN(event.key)){
+            let screen = document.getElementById("screen");
+            screen.classList.add("shake");
+            setTimeout(()=>{
+                screen.classList.remove("shake");
+
+
+            },30);
         }
 
     })
@@ -84,3 +98,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
 })
+
+function isoperator(key){
+    return ['+','-','/','*'].includes(key);
+}

@@ -11,23 +11,26 @@ let scroll = document.getElementById("scroll");
 let outmouse = document.getElementById("outmouse");
 
 onclick.addEventListener("click",()=>{
-    onclick.style.backgroundColor = onclick.style.backgroundColor=="orange"?"":"orange";
+    onclick.classList.contains("event")?onclick.classList.remove("event"):onclick.classList.add("event");
+
 })
 
 dblclick.addEventListener("dblclick",()=>{
-    dblclick.style.backgroundColor = dblclick.style.backgroundColor=="orange"?"":"orange";
+    dblclick.classList.contains("event")?dblclick.classList.remove("event"):dblclick.classList.add("event");
 })
 
 hover.addEventListener("mouseover",()=>{
-    hover.style.backgroundColor = hover.style.backgroundColor=="orange"?"":"orange";
+    hover.classList.add("event");
+    
 })
 
+
 hover.addEventListener("mouseout",()=>{
-    hover.style.backgroundColor = hover.style.backgroundColor=="orange"?"":"orange";
+    hover.classList.remove("event");
 })
 
 mouseout.addEventListener("mouseout",()=>{
-    mouseout.style.backgroundColor = mouseout.style.backgroundColor=="orange"?"":"orange";
+    mouseout.classList.contains("event")?mouseout.classList.remove("event"):mouseout.classList.add("event");
 })
 
 

@@ -1,0 +1,100 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(65, 65, 65);
+    width: 250px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 20px 20px;
+    transform-style: preserve-3d;
+    box-shadow: -7px 12px 10px 5px #a5a4a4,inset -2px 2px 5px 1px rgb(204, 204, 204);
+
+}
+
+
+.row{
+    display: flex;
+    width: 90%;
+    justify-content: center;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* /* width: 100vw; */
+    height: 100vh; 
+    background-color: lightgray;
+    /* background-image: url("background.jpg") ; */
+}
+
+
+/* .oprator{
+    color: red !important;
+} */
+
+.btndesign{
+    height: 50px;
+    width: 50px;
+    background-color: rgb(228, 228, 226);
+    margin: 3px 3px 3px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: -2px 2px 2px 1px rgb(29, 29, 29), inset -1px 1px 5px 0.5px rgb(151, 151, 151);
+    color: black;
+
+
+}
+
+#screen{
+    height: 50px;
+    width: 80%;
+    background-color: #a6ffa6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10%;
+    border-radius: 10px;
+    padding: 0px 5px 0px 5px;
+    font-size: larger;
+
+}
+
+#clr{
+    background-color: red;
+    width:30% ;
+}
+
+#backspace{
+    background-color: black;
+    color: white;
+    width: 30%;
+}
+#ans{
+    background-color: darkblue;
+    color: white;
+    width: 30%;
+
+}
+
+
+.blink {
+    /* background-color: gray; */
+    color: #d0ff00;
+    box-shadow: none;
+    background-color: #313131;
+}
+
+.button{
+    font-size: large;
+    font-weight: bold;
+
+}
+
+#tag{
+    color: white;
+}

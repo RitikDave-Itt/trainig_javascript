@@ -1,0 +1,45 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 0; /* Remove default margin */
+}
+
+#heading{
+    color: black;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(255, 235, 121);
+
+    width: 50%;
+
+    justify-self: center;
+
+    
+
+}
+
+.box{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    margin-top: 20px;
+    background-color: white;
+    border: 2px solid #ccc;
+    cursor: pointer;
+
+    transition:background-color 0.5s;
+
+
+}

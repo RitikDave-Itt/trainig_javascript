@@ -1,21 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>JS_DOM</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="container">
+      <div class="textInput">Enter text <input type="text" /></div>
 
-    <form  name="myform" action="" onsubmit="return onsubmit()" method="post">
-        Name <input type="text" name="fname">
-             <input type="submit" value="submit">
-        
-    </form>
+      <div class="styles">
+        <h3> select style for text </h3>
+        <div class="row">
+          <div class="style1 box">style1</div>
+          <div class="style2 box">style2</div>
+          <div class="style3 box">style3</div>
+          <div class="style4 box">style4</div>
+        </div>
+        <div class="row">
+          <div class="style5 box">style5</div>
+          <div class="style6 box">style6</div>
+          <div class="style7 box">style7</div>
+          <div class="style8 box">style8</div>
+        </div>
 
+        <div class="textDesign">
 
-    
-</body>
+        <div class="colorpicker">
+            <h3>select color</h3>
+
+           <div class="slider"> Red <input type="range" id="red" min  = "0" max="255" value="0">        <span id="redValue">0</span>
+           </div>
+           <div class=" slider"> Green <input type="range" id="green"><span class="greenValue">0</span></div>
+           <div class="slider">  Blue <input type="range" id="blue"><span class="blueValue">0</span></div>
+
+        </div>
+        <div class="textproperty">
+            <h3>Font Property</h3>
+
+            <div class="slider"> weight <input type="range" id="weight" min  = "0" max="100" value="50">        <span id="weightValue">50</span>
+            </div>
+            <div class="slider"> size <input type="range" id="size" min  = "0" max="100" value="50">        <span id="sizeValue">50</span>
+            </div>
+        </div>
+
+    </div>
+
+      </div>
+    </div>
+  </body>
 </html>

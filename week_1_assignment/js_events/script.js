@@ -36,5 +36,18 @@ mouseout.addEventListener("mouseout",()=>{
 
 
 
+
+
+})
+document.addEventListener("keydown",(event)=>{
+    let keybtn = document.getElementById("keybtn");
+    if(event.key == " ")
+        keybtn.innerHTML= "Space"
+    else
+        keybtn.innerText =event.key;
+    setTimeout(()=>{
+        keybtn.innerText = "";
+    },200);
+
 })
 

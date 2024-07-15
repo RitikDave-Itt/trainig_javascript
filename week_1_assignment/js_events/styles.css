@@ -1,68 +1,66 @@
-body{
-    display: flex;
+body {
+  display: flex;
     justify-content: center;
     margin: 0;
     user-select: none;
 }
 
-#heading{
-    color: black;
-
+#heading {
+  color: black;
 }
 
-.container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    background-color: rgba(247, 187, 75, 0.911);
-    
+  background-color: rgba(247, 187, 75, 0.911);
 
-    width: 70%;
-    height: 100vh;
+  width: 70%;
+  height: 100vh;
 
-    justify-self: center;
-
-
-    
-
+  justify-self: center;
 }
 
-.box{
-    background-color: white;
-    width: 150px;
-    height: 150px;
+.box {
+  background-color: white;
+  width: 150px;
+  height: 150px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  /* margin:10px 10px 10px 10px; */
+  background-color: white;
+  border: 2px solid #ccc;
+  cursor: pointer;
 
-    /* margin:10px 10px 10px 10px; */
-    background-color: white;
-    border: 2px solid #ccc;
-    cursor: pointer;
-
-    transition:background-color 0.5s;
-    box-shadow: -10px 10px 5px 4px rgb(65, 64, 64) ;
-
-
-
+  transition: background-color 0.5s;
+  box-shadow: -10px 10px 5px 4px rgb(65, 64, 64);
 }
-.row{
-    display: flex;
-    justify-content: space-around ;
-    align-items: center;
-    width: 70%;
-    height: 100%;
-
+.row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  height: 100%;
 }
 
-.event{
-    box-shadow: -10px 10px 5px 4px rgb(65, 64, 64) ;
-    width: 200px;
-    height: 200px;
-    background-color: greenyellow;
+.event {
+  box-shadow: -10px 10px 5px 4px rgb(65, 64, 64);
+  width: 200px;
+  height: 200px;
+  background-color: greenyellow;
+}
 
-
+#keybtn {
+  position: fixed;
+  left: 50%;
+  top: 10%;
+  z-index: 1000;
+  height: 40px;
+  width: 100px;
+  color: red;
+  /* background-color: white; */
 }

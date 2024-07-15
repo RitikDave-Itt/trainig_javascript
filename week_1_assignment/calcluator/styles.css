@@ -22,6 +22,7 @@
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     /* /* width: 100vw; */
@@ -52,7 +53,7 @@ body{
 
 #screen{
     height: 50px;
-    width: 80%;
+    width: 70%;
     background-color: #a6ffa6;
     display: flex;
     align-items: center;
@@ -64,6 +65,8 @@ body{
     border: #313131;
     overflow-x: auto;
     scrollbar-width: thin; 
+    padding: 0% 5% 0% 5%;
+    
 
 }
 

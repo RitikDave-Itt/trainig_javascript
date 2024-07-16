@@ -8,41 +8,44 @@
     <title>JS_DOM</title>
   </head>
   <body>
+    <div class="view">
+        <h3 id="viewText" >Enter Text</h3>
+    </div>
     <div class="container">
-      <div class="textInput">Enter text <input type="text" /></div>
+      <div class="textInput" >Enter text <input  id="input" type="text" placeholder="Enter Text"  /></div>
 
       <div class="styles">
-        <h3> select style for text </h3>
+        <h3> Select Style For Text </h3>
         <div class="row">
-          <div class="style1 box">style1</div>
-          <div class="style2 box">style2</div>
-          <div class="style3 box">style3</div>
-          <div class="style4 box">style4</div>
+          <div class="style1 box"><p>style1</p></div>
+          <div class="style2 box"><p>style2</p></div>
+          <div class="style3 box"><p>style3</p></div>
+          <div class="style4 box"><p>style4</p></div>
         </div>
         <div class="row">
-          <div class="style5 box">style5</div>
-          <div class="style6 box">style6</div>
-          <div class="style7 box">style7</div>
-          <div class="style8 box">style8</div>
+          <div class="style5 box"><p>style5</p></div>
+          <div class="style6 box"><p>style6</p></div>
+          <div class="style7 box"><p>style7</p></div>
+          <div class="style8 box"><p>style8</p></div>
         </div>
 
         <div class="textDesign">
 
         <div class="colorpicker">
-            <h3>select color</h3>
+            <h3>Select Color</h3>
 
            <div class="slider"> Red <input type="range" id="red" min  = "0" max="255" value="0">        <span id="redValue">0</span>
            </div>
-           <div class=" slider"> Green <input type="range" id="green"><span class="greenValue">0</span></div>
-           <div class="slider">  Blue <input type="range" id="blue"><span class="blueValue">0</span></div>
+           <div class=" slider"> Green <input type="range" id="green" min ="0" max="255" value="0"><span id="greenValue">0</span></div>
+           <div class="slider">  Blue <input type="range" id="blue" min ="0" max="255" value="0"><span id="blueValue">0</span></div>
 
         </div>
         <div class="textproperty">
             <h3>Font Property</h3>
 
-            <div class="slider"> weight <input type="range" id="weight" min  = "0" max="100" value="50">        <span id="weightValue">50</span>
+            <div class="slider"> weight <input type="range" id="weight" min  = "100" max="900" step="100" value="400">        <span id="weightValue">400</span>
             </div>
-            <div class="slider"> size <input type="range" id="size" min  = "0" max="100" value="50">        <span id="sizeValue">50</span>
+            <div class="slider"> size <input type="range" id="size" min  = "1" max="100" value="30">        <span id="sizeValue">30</span>
             </div>
         </div>
 

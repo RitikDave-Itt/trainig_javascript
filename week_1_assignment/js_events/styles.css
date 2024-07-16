@@ -58,11 +58,11 @@ body {
 
 #keybtn {
   position: fixed;
-  left: 50%;
-  top: 10%;
+  
   z-index: 1000;
-  height: 40px;
-  width: 100px;
+  
   color: red;
+  font-size: 9rem;
+  background:white;
   /* background-color: white; */
 }

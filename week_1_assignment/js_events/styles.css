@@ -36,6 +36,8 @@ body {
   border: 2px solid #ccc;
   cursor: pointer;
 
+  border-radius: 10px;
+
   transition: background-color 0.5s;
   box-shadow: -10px 10px 5px 4px rgb(65, 64, 64);
 }

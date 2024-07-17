@@ -60,6 +60,8 @@ document.addEventListener("DOMContentLoaded",()=>{
         if(event.key==="Enter"){
             try{
             screen.innerText = eval(screen.innerText);
+
+
             }
             catch{
                 screen.innerText = "Invalid !"

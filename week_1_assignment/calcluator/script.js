@@ -170,7 +170,7 @@ function evaluate(expression) {
       let postfix = infixToPostfix(expression);
       return evaluatePostfix(postfix);
   } catch (error) {
-      return 'Error: Invalid expression';
+      return 'Error: please input valid';
   }
 }
 

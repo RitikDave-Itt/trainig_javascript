@@ -1,0 +1,112 @@
+[
+    {
+        "employeeId": "E001",
+        "name": "John Doe",
+        "designation": "Software Engineer",
+        "joiningYear": 2021,
+        "technology": ["JavaScript", "React"],
+        "department": "Engineering",
+        "email": "john.doe@example.com",
+        "phone": "+1-555-1234"
+    },
+    {
+        "employeeId": "E002",
+        "name": "Jane Smith",
+        "designation": "Project Manager",
+        "joiningYear": 2019,
+        "technology": ["Project Management", "Agile"],
+        "department": "Management",
+        "email": "jane.smith@example.com",
+        "phone": "+1-555-5678"
+    },
+    {
+        "employeeId": "E003",
+        "name": "Alice Johnson",
+        "designation": "Product Owner",
+        "joiningYear": 2020,
+        "technology": ["Product Management", "Scrum"],
+        "department": "Product",
+        "email": "alice.johnson@example.com",
+        "phone": "+1-555-8765"
+    },
+    {
+        "employeeId": "E004",
+        "name": "Bob Brown",
+        "designation": "QA Engineer",
+        "joiningYear": 2022,
+        "technology": ["Automation Testing", "Selenium"],
+        "department": "Quality Assurance",
+        "email": "bob.brown@example.com",
+        "phone": "+1-555-4321"
+    },
+    {
+        "employeeId": "E005",
+        "name": "Carol White",
+        "designation": "DevOps Engineer",
+        "joiningYear": 2018,
+        "technology": ["CI/CD", "Docker"],
+        "department": "Operations",
+        "email": "carol.white@example.com",
+        "phone": "+1-555-9876"
+    },
+    {
+        "employeeId": "E006",
+        "name": "Eve Davis",
+        "designation": "Backend Developer",
+        "joiningYear": 2021,
+        "technology": ["Python", "Django"],
+        "department": "Engineering",
+        "email": "eve.davis@example.com",
+        "phone": "+1-555-6789"
+    },
+    {
+        "employeeId": "E007",
+        "name": "Frank Moore",
+        "designation": "Frontend Developer",
+        "joiningYear": 2020,
+        "technology": ["HTML", "CSS", "JavaScript"],
+        "department": "Engineering",
+        "email": "frank.moore@example.com",
+        "phone": "+1-555-3456"
+    },
+    {
+        "employeeId": "E008",
+        "name": "Grace Lee",
+        "designation": "Data Scientist",
+        "joiningYear": 2021,
+        "technology": ["Python", "Machine Learning"],
+        "department": "Data Science",
+        "email": "grace.lee@example.com",
+        "phone": "+1-555-7654"
+    },
+    {
+        "employeeId": "E009",
+        "name": "Henry Wilson",
+        "designation": "Database Administrator",
+        "joiningYear": 2019,
+        "technology": ["SQL", "NoSQL"],
+        "department": "Database Administration",
+        "email": "henry.wilson@example.com",
+        "phone": "+1-555-4321"
+    },
+    {
+        "employeeId": "E010",
+        "name": "Ivy Martinez",
+        "designation": "UX Designer",
+        "joiningYear": 2020,
+        "technology": ["Sketch", "Figma"],
+        "department": "Design",
+        "email": "ivy.martinez@example.com",
+        "phone": "+1-555-8765"
+    },
+    {
+        "employeeId": "E011",
+        "name": "Jack Anderson",
+        "designation": "Mobile Developer",
+        "joiningYear": 2019,
+        "technology": ["Kotlin", "Swift"],
+        "department": "Mobile Development",
+        "email": "jack.anderson@example.com",
+        "phone": "+1-555-1234"
+    }
+]

@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    
+    
+}
+
+.signup-form {
+    /* margin-top: 5%; */
+    background-color: #fff;
+    padding: 5%;
+    border-radius: 1%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 400px;
+
+ h2 {
+    margin-bottom: 10%;
+    margin-top: 2%;
+    text-align: center;
+}
+ label {
+    display: block;
+    margin-bottom: 2%;
+    font-weight: bold;
+}
+ input[type="text"],
+ input[type="email"],
+ input[type="file"],
+ input[type="password"],
+ input[type="retype-password"]
+
+
+ select {
+    width: 100%;
+    padding: 2%;
+    margin-bottom: 5%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+ button {
+    width: 100%;
+    padding: 2.5%;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 5%;
+}
+ button:hover {
+    background-color: #0056b3;
+}
+}

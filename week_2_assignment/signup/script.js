@@ -6,39 +6,81 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.querySelector(".signup-form").addEventListener("submit", (event) => {
-    const password = document.getElementById("password");
+    event.preventDefault();
 
-    const retypePassword = document.getElementById("retype-password");
     const formdata = new FormData(event.target);
+    const formObject = {};
 
-    const formDataJsObject = Object.fromEntries(formdata.entries());
+    formdata.forEach((value, key) => {
+      formObject[key] = value;
+    });
 
-    if (formDataJsObject["password"] == formDataJsObject["retype-password"]) {
-      delete formDataJsObject["retype-password"];
-      formDataJsObject.password = CryptoJS.SHA256(formDataJsObject.password).toString();
+    if (formObject["password"] !== formObject["retype-password"]) {
+      alert("Passwords do not match");
+      return;
+    }
 
+    const file = formdata.get("image");
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const base64String = e.target.result;
+      formObject.image = base64String;
+      saveToIndexedDB(formObject);
+    };
 
-      let users = localStorage.getItem("users");
+    reader.readAsDataURL(file); // Read the file as a data URL (base64 encoded)
 
-      users = users ? JSON.parse(users) : [];
+    function saveToIndexedDB(obj) {
+      const request = window.indexedDB.open("users", 1);
 
-      formDataJsObject.id = "id" + users.length;
+      request.onerror = (error) => {
+        console.log("Error opening database:", error);
+      };
 
-      const emailExists = users.some(
-        (user) => user.email === formDataJsObject.email
-      );
+      request.onupgradeneeded = (event) => {
+        const db = event.target.result;
+        const objectStore = db.createObjectStore("users", {
+          keyPath: "email",
+        });
+        objectStore.createIndex("emailIndex", "email", { unique: true });
+      };
 
-      if (emailExists) {
-        alert("user already Exists");
-        event.preventDefault();
-      } else {
-        users.push(formDataJsObject);
+      request.onsuccess = (event) => {
+        const db = event.target.result;
+        const transaction = db.transaction("users", "readwrite");
+        const objectStore = transaction.objectStore("users");
 
-        localStorage.setItem("users", JSON.stringify(users));
-      }
-    } else {
-      alert("getting Blaocked in next 10 mins");
-      event.preventDefault();
+        const emailCheck = objectStore.get(obj.email);
+
+        emailCheck.onsuccess = () => {
+          if (emailCheck.result) {
+            alert("Email already exists.");
+          } else {
+            const addRequest = objectStore.add(obj);
+
+            addRequest.onsuccess = () => {
+              console.log("User added successfully.");
+              event.target.submit(); // Submit the form after successful addition
+            };
+
+            addRequest.onerror = (error) => {
+              console.log("Error adding user:", error);
+            };
+
+            transaction.oncomplete = () => {
+              console.log("Transaction completed: database modification finished.");
+            };
+
+            transaction.onerror = (error) => {
+              console.log("Transaction error:", error);
+            };
+          }
+        };
+
+        emailCheck.onerror = (error) => {
+          console.log("Error checking email:", error);
+        };
+      };
     }
   });
 });

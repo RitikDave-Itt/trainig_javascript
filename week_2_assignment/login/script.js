@@ -1,36 +1,53 @@
-
-
-document.querySelector(".signup-form").addEventListener("submit", (event) => {
-
-
+document.querySelector(".signup-form").addEventListener("submit", async (event) => {
+    event.preventDefault(); 
 
     const formdata = new FormData(event.target);
-
     const InputData = Object.fromEntries(formdata.entries());
 
+    function getUserData(email) {
+        return new Promise((resolve, reject) => {
+            const request = window.indexedDB.open("users", 1);
 
+            request.onerror = (error) => {
+                reject(error);
+            };
 
-    const usersDataString = localStorage.getItem("users");
+            request.onsuccess = (event) => {
+                const db = event.target.result;
+                const transaction = db.transaction("users", "readonly");
+                const objectStore = transaction.objectStore("users");
 
-    const users = JSON.parse(usersDataString);
+                const getRequest = objectStore.get(email);
 
-    let employe = users.find(emp => emp.email === InputData.email)
+                getRequest.onsuccess = () => {
+                    if (getRequest.result) {
+                        resolve(getRequest.result);
+                    } else {
+                        resolve(null); // Resolve with null if no user is found
+                    }
+                };
 
-    if (employe) {
-        let password = CryptoJS.SHA256(InputData.password).toString();
+                getRequest.onerror = (error) => {
+                    reject(error);
+                };
+            };
+        });
+    }
 
-        if (password!= employe.password) {
-            console.log(InputData.password,employe.password)
-            alert("Wrong Password");
-            event.preventDefault();
-
+    try {
+        const user = await getUserData(InputData.email);
+        if (user) {
+            if (user.password !== InputData.password) {
+                alert("Wrong Password");
+            } else {
+                // Proceed with form submission or any other logic
+                console.log("User authenticated:", user);
+                event.target.submit(); // Explicitly submit the form if authentication is successful
+            }
+        } else {
+            alert("User not found with this email.");
         }
-       
-
+    } catch (error) {
+        console.error("Error during user authentication:", error);
     }
-    else{
-        alert("employe not found");
-        event.preventDefault();
-    }
-}
-)
+});

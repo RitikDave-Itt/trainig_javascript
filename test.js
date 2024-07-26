@@ -1,1 +1,23 @@
-console.log([1,2,3,4].at(-1))
+
+console.log("hello")
+console.log("hello")
+console.log("hello")
+
+async function hello(){
+    let i = 0;
+    while(i<10000){
+
+        i++;
+
+    }
+    console.log("ritik");
+}
+
+hello();
+
+
+console.log("hello")
+console.log("hello")
+console.log("hello")
+console.log("hello")
+console.log("hello")

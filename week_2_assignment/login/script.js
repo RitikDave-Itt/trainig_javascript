@@ -4,7 +4,7 @@ document.querySelector(".signup-form").addEventListener("submit", async (event) 
     const InputData = Object.fromEntries(formdata.entries());
 
     
-
+(async()=>{
     try {
         const user = await getUserData(InputData.email);
         if (user) {
@@ -12,8 +12,8 @@ document.querySelector(".signup-form").addEventListener("submit", async (event) 
                 alert("Wrong Password");
             } 
             else {
-               
-                window.location.href("../gallery/index.html");
+                window.localStorage.setItem("authenticated","true");               
+                window.location.href="../gallery/index.html";
             }
         } 
         else {
@@ -22,6 +22,7 @@ document.querySelector(".signup-form").addEventListener("submit", async (event) 
     } catch (error) {
         console.error("Error user authentication:", error);
     }
+})()
 });
 
 function getUserData(email) {

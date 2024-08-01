@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,44 +8,82 @@
     <script defer src="script.js"></script>
     <title>Document</title>
     <style>
-       
-        
+        /* Add any additional styles here if needed */
     </style>
 </head>
+
 <body>
-    <iframe src="calender/index.html" frameborder="0"></iframe>
-    
-    <div class="todo-container">
+    <div class="hide input-todo">
+    <div class="input-box">
+        <form action="" class="form-todo">
+            <div class="heading">Input Task</div>
+            <input type="text" placeholder="Enter Task" id="input-task" name="task" required>
+            <input type="datetime-local"  id="date-time" name="time" required>
+            <button type="submit">Add TODO </button>  
+        </form>
+        <div class="close-input">
+            X
+        </div>
+    </div>
+</div>
+ 
+    <div class="sidebar">
+        <div class="logo">
+            <!-- <img id ="logo-image" src="./images/logo.png" alt=""> -->
+             <div class="circle">
+                 <div class="rect1"></div>
+                 <div class="rect2"></div>
+                 <div class="rect3"></div>
+                 <div class="rect4"></div>
+                 <div class="arrow">✔</div>
 
-        <div class="add-todo">
-            <form action=""  id = "addTodo" name="addTodo">
-                <label for="date">Enter Task</label>
-                <input type="text" name="task">
-                <label for="due">have to done before</label>
-                <input type="datetime-local" name="time">
-                <button type="submit">Add Task</button>
-            </form>
-
-            <div class="display-todo ">
-                <div class="todo-card  heading">
-                    <div class="task-name">
-                        Task
-
-                    </div>
-                    <div class="task-time">
-                        Time
-
-                    </div>
-                    <div class="remaining-time">
-                        Remaining Time
-
-                    </div>
-                </div>
-                
-            </div>
+             </div>
         </div>
         
+        <div class="menu">
+           
+            <div class="item">All Tasks</div>
+        <div class="item">Remaining Tasks</div>
+        <div class="item">Completed Task</div>
+        <div class="item add-task-button">
+            +
+        </div>
+        <div class="item add-task-button fun">
+            <p class="jump" id="jump">
+            fun
+        </p>
+        </div>
+        </div>
+
     </div>
 
+    <div class="container">
+
+            
+        <div class="task-list">
+            <div class="titles">
+                <div class="title">Tasks</div>
+                <div class="title">Date</div>
+                <div class="title">Remaining Time</div>
+               
+            </div>
+            <template id="task-template">
+                <div class="task">
+                  <div class="edit">
+                    <button class="task-tick">X</button>
+                    <button class="task-close">❌</button>
+                    <button class="task-edit">✎</button>
+                  </div>
+                  <div class="task-text"></div>
+                  <div class="task-time"></div>
+                  <div class="task-remaining-time"></div>
+                </div>
+              </template>
+           
+        </div>
+    </div>
+
+
 </body>
+
 </html>

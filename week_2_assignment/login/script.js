@@ -1,4 +1,4 @@
-document.querySelector(".signup-form").addEventListener("submit", async (event) => {
+document.querySelector(".login-form").addEventListener("submit", async (event) => {
     event.preventDefault();
     const formdata = new FormData(event.target);
     const InputData = Object.fromEntries(formdata.entries());

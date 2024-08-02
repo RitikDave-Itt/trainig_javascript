@@ -81,7 +81,7 @@ body {
     /* visibility: hidden; */
     position: fixed;
     width: 100vw;
-    z-index: 50;
+    z-index: 500;
     background-color: var(--color-light-3);
     backdrop-filter: blur(10px);
     height: 100vh;

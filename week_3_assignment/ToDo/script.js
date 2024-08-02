@@ -152,7 +152,7 @@ function createTaskCard(taskData) {
   const taskRemainingTime = taskClone.querySelector(".task-remaining-time");
   const tickButton = taskClone.querySelector(".task-tick");
   const closeButton = taskClone.querySelector(".task-close");
-  const editButton = taskClone.querySelector(".task-edit");
+  // const editButton = taskClone.querySelector(".task-edit");
 
   taskText.textContent = taskData.task;
   taskTime.textContent = taskData.time;
@@ -169,9 +169,9 @@ function createTaskCard(taskData) {
     removeTaskFromLocalStorage(taskData);
   });
 
-  editButton.addEventListener("click", () => {
-    editTask(taskData, taskClone.querySelector(".task"));
-  });
+  // editButton.addEventListener("click", () => {
+  //   editTask(taskData, taskClone.querySelector(".task"));
+  // });
 
   return taskClone;
 }

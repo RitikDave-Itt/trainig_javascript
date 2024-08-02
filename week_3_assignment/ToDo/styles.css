@@ -26,7 +26,7 @@
     --color-dark-8: rgb(calc(var(--base-r) - 160), calc(var(--base-g) - 160), calc(var(--base-b) - 160));
     --color-dark-9: rgb(calc(var(--base-r) - 180), calc(var(--base-g) - 180), calc(var(--base-b) - 180));
 
-    --completed-percent: 0%;
+    --completed-percent: 70%;
     --remaining-percent: calc(100% - var(--completed-percent));
 }
 
@@ -313,7 +313,7 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    overflow: auto;
+    /* overflow: auto; */
     /* background-color:var(--color-light-) ; */
 
 
@@ -356,6 +356,7 @@ body {
     align-items: center;
     height: 100vh;
     border-radius: 20px;
+    overflow: auto;
 }
 
 .task {
@@ -539,7 +540,7 @@ body {
     justify-content: center;
     position: relative;
     margin: 20px 0;
-    border:1px solid black;
+    border: 1px solid black;
 }
 
 .pie-chart::after {
@@ -549,46 +550,38 @@ body {
     background-color: white;
     border-radius: 50%;
     position: absolute;
-    border:1px solid black;
+    border: 1px solid black;
 
 }
 
 .pie-chart-div {
-
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: space-around; */
     align-items: center;
-    height: 30%;
-    
     width: 100%;
     margin: 10px 0;
-   
 }
 
 .pie-chart-div div {
-    width: 80%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 2%;
+    justify-content: space-between;
+    width: 70%;
 }
 
-
-.completed-task-pie {
+.pie-chart-div div span {
     display: inline-block;
     width: 12px;
     height: 12px;
     margin-right: 5px;
     border-radius: 2px;
+}
+
+.completed-task-pie {
     background-color: rgb(0, 255, 21); /* Green */
 }
 
 .incomplete-task-pie {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
-    border-radius: 2px;
     background-color: red; /* Orange */
 }

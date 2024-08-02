@@ -258,10 +258,10 @@ document.addEventListener('localStorageChange', function(event) {
 
   let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
   console.log(localStorageTodo);
-  let completedTaskList = localStorageTodo.filter((task)=>task.complete);
+  let completedTaskList = localStorageTodo.filter((task)=>!task.complete);
   
   let completedTaskCount = completedTaskList.length;
-  let completepercent = ((localStorageTodo.length - completedTaskCount)/localStorageTodo.length)*100;
+  let completepercent = Math.floor(((localStorageTodo.length - completedTaskCount)/localStorageTodo.length)*100);
   console.log(completepercent);
   document.documentElement.style.setProperty("--completed-percent", `${completepercent}%`);
 

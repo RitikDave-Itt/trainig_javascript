@@ -1,7 +1,8 @@
 :root {
-    --base-r: 25;
-    --base-g: 290;
-    --base-b: 90;
+      
+    --base-r: 187;
+    --base-g: 175;
+    --base-b: 59;
 
     --color-base: rgb(var(--base-r), var(--base-g), var(--base-b));
 
@@ -36,6 +37,8 @@ body {
     user-select: none;
     background-color: var(--color-light-8);
     transition: background-color 0.3s ease;
+    position: relative;
+    overflow-x: hidden;
 }
 
 .sidebar-button {
@@ -74,7 +77,7 @@ body {
     /* visibility: hidden; */
     position: fixed;
     width: 100vw;
-    z-index: 50;
+    /* z-index: 50; */
     background-color: var(--color-light-3);
     backdrop-filter: blur(10px);
     height: 100vh;
@@ -84,11 +87,33 @@ body {
 .sidebar {
     display: flex;
     flex-direction: column;
-    width: 15%;
+    width: 17%;
     height: 100%;
-    /* background-color:  rgb(188, 186, 186); */
+    background-color: var(--color-light-7);
+
     align-items: center;
+    overflow: hidden;
+    transition: width 0.2s ease;
+    position: relative;
+
+    border-radius: 10px;
+
+    
+    :hover{
+        .open-close-sidebar-button{
+            display: block;
+        }
+    }
 }
+.hide-sidebar{
+    width: 0px;
+}
+
+
+
+
+
+
 
 .logo {
     height: 100px;
@@ -149,8 +174,8 @@ body {
     justify-content: center;
     align-items: center;
 
-    color: var(--color-light-1);
-    font-size: 6rem;
+    color: white;
+    font-size: 4rem;
     font-weight: 600;
     position: absolute;
     top: 50%;
@@ -167,34 +192,86 @@ body {
     object-fit: contain;
 } */
 
-.menu {
+.open-close-sidebar{
+    position: absolute;
     display: flex;
-    flex-direction: column;
-    background-color: var(--color-light-3);
     align-items: center;
-    width: 100%;
-    height: 80%;
-    border-radius: 20px;
+    width: 100px;
+    height: 100%;
+    
+    z-index: 100;
+
+
+}
+.open-close-sidebar:hover .open-close-sidebar-button{
+    /* background-color: rgba(167, 167, 167, 0.36); */
+    width: 20px;
+    overflow: visible;
+    :hover{
+        background-color: var(--color-dark-8);
+
+
+    }
+
 
 }
 
+.open-close-sidebar-button{
+    width: 0px;
+    overflow: hidden;
+    /* display: none; */
+    background-color: var(--color-dark-3);
+    color: white;
+    width: 20%px;
+    height:100%;
+    border-radius: 0px 20px 20px 0px;
+    align-self: center;
+    transition: width 0.2s ease;
+    display: flex;
+    align-items: center;
+    :hover{
+        background-color: rgba(187, 186, 186, 0.819);
+
+
+    }
+    
+    
+}
+
+.menu {
+    background-color: var(--color-light-3);
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: width 0.3s ease;
+    overflow: hidden;
+
+}
+
+
 .item {
-    background-color: var(--color-dark-7);
+    background-color: var(--color-dark-5);
     height: 50px;
     width: 80%;
     margin-top: 10%;
-    border-radius: 20px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(255, 255, 255);
     box-shadow: 0px 0px 2px 1px black;
     transition: box-shadow, background-color 0.5s;
+    z-index: 200;
+    position: relative;
 
 }
 
 .item:hover {
-    background-color: var(--color-dark-5);
+    background-color: var(--color-dark-8);
     box-shadow: 0px 0px 2px 2px black;
 
 }
@@ -205,7 +282,7 @@ body {
     align-items: center;
     height: 60px;
     width: 40%;
-    background-color: var(--color-dark-7);
+    background-color: var(--color-dark-5);
     color: rgb(255, 255, 255);
     font-size: 5rem;
 
@@ -213,11 +290,16 @@ body {
 }
 
 .add-task-button:hover {
-    background-color: var(--color-dark-5);
+    background-color: var(--color-dark-8);
 }
 
 .fun {
     font-size: 2rem;
+
+    img{
+        width: 90%;
+        height: 90%;
+    }
 
 }
 
@@ -235,11 +317,11 @@ body {
 }
 
 .titles {
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-evenly;
     /* position: fixed; */
-    height: 15%;
+    min-height: 8%;
     background-color: var(--color-dark-4);
     font-size: 1.5rem;
     border-radius: 20px;
@@ -254,47 +336,67 @@ body {
     justify-content: center;
     align-items: center;
     width: 80%;
+    border-left: 2px;
 
 }
-
+.status{
+    width: 20%;
+}
 .task-list {
     /* margin-top: 2%; */
-    width: 80%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
     align-items: center;
-    height: 100%;
+    height: 100vh;
     border-radius: 20px;
 }
 
 .task {
     margin-top: 2%;
-    height: 10%;
+    min-height: 6%;
+    height: 6%;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     position: relative;
+    border-radius: 20px;
+    background-color:var(--color-light-3);
+    transition: background-color 0.5s ease;
 
-    div {
+    .task-text, .task-time, .task-remaining-time {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 80%;
     }
 
-    border-radius: 20px;
-    background-color:var(--color-light-3);
-    transition: background-color 0.5s ease;
+
+   
 
 }
+
+.task-status{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input{
+        width: 60%;
+        height: 60%;
+        border-radius: 20px;
+    }
+   
+}
+
 .task .edit {
     visibility: hidden;
-    height: 40%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: space-evenly;
-    width: 12%;
+    width: 10%;
     position: absolute;
     top: -28%;
     right: 0%;
@@ -303,6 +405,9 @@ body {
     button{
         background-color: var(--color-dark-1);
         border-radius: 10px;
+        width: 40%;
+        height:100%;
+
         color: white;
     }
     button:hover{
@@ -377,9 +482,18 @@ body {
         margin-top: 5%;
         border-radius: 10px;
         font-size: 1.2rem;
+        background-color: var(--color-light-1);
+        :hover{
+            background-color: var(--color-dark-1);
+        }
 
 
     }
+
+}
+
+.form-todo button:hover{
+    background-color: var(--color-dark-4);
 
 }
 
@@ -388,5 +502,5 @@ body {
 
 }
 .template{
-    display: none;
+    /* display: none; */
 }

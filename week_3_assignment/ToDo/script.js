@@ -68,14 +68,48 @@ openCloseSidebarButton.addEventListener("click", () => {
 });
 
 // #########################################################################################
+// localstorage
+// #########################################################################################
+// Custom event to notify about localStorage changes
+const localStorageChangeEvent = new Event('localStorageChange');
+
+const originalSetItem = window.localStorage.setItem;
+const originalRemoveItem = window.localStorage.removeItem;
+
+function setItem(key, value) {
+    originalSetItem.call(window.localStorage, key, value);
+    document.dispatchEvent(localStorageChangeEvent); 
+}
+
+function removeItem(key) {
+    originalRemoveItem.call(window.localStorage, key);
+    document.dispatchEvent(localStorageChangeEvent); 
+}
+
+window.localStorage.setItem = setItem;
+window.localStorage.removeItem = removeItem;
+
+
+
+// #########################################################################################
+// localstorage
+// #########################################################################################
+
+// #########################################################################################
 // Logic
 // #########################################################################################
+
+
 
 const formTodo = document.querySelector(".form-todo");
 const taskList = document.querySelector(".task-list");
 // const taskCard = document.querySelector(".task");
 
 document.addEventListener("DOMContentLoaded", (event) => {
+  
+  document.dispatchEvent(localStorageChangeEvent); 
+
+
   let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
 
   localStorageTodo?.map((task) => {
@@ -89,7 +123,7 @@ formTodo.addEventListener("submit", (event) => {
   let dataObject = Object.fromEntries(data.entries());
   dataObject["id"] = Date.now();
   dataObject["complete"] = false;
-  console.log(dataObject);
+  // console.log(dataObject);
 
   let localStorageTodo = window.localStorage.getItem("todo");
 
@@ -213,6 +247,31 @@ allTasks.addEventListener("click",(event)=>{
     localStorageTodo.forEach((task) => {
         taskList.appendChild(createTaskCard(task));
     });
+    
+   
+})
+
+document.addEventListener('localStorageChange', function(event) {
+  const completedPercentSpan = document.getElementById("completed-percent");
+  const remainingPercentSpan = document.getElementById("remaining-percent");
+
+
+  let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
+  console.log(localStorageTodo);
+  let completedTaskList = localStorageTodo.filter((task)=>task.complete);
+  
+  let completedTaskCount = completedTaskList.length;
+  let completepercent = ((localStorageTodo.length - completedTaskCount)/localStorageTodo.length)*100;
+  console.log(completepercent);
+  document.documentElement.style.setProperty("--completed-percent", `${completepercent}%`);
+
+  completedPercentSpan.textContent = `${completepercent}%`
+  remainingPercentSpan.textContent = `${100-completepercent}%`
+
 
 })
+
+
+
+
 

@@ -68,8 +68,10 @@ openCloseSidebarButton.addEventListener("click", () => {
 });
 
 // #########################################################################################
-// localstorage
+// Custom Events
 // #########################################################################################
+
+
 // Custom event to notify about localStorage changes
 const localStorageChangeEvent = new Event('localStorageChange');
 
@@ -90,10 +92,6 @@ window.localStorage.setItem = setItem;
 window.localStorage.removeItem = removeItem;
 
 
-
-// #########################################################################################
-// localstorage
-// #########################################################################################
 
 // #########################################################################################
 // Logic
@@ -270,6 +268,39 @@ document.addEventListener('localStorageChange', function(event) {
 
 
 })
+
+
+// task remaining sort
+
+const remainingTimeHeader = document.querySelector(".remaining-time-header");
+
+function getRemainingTimeValue(remainingTimeText) {
+  if (remainingTimeText === "Deadline Passed") return Number.MAX_SAFE_INTEGER;
+
+  const timeParts = remainingTimeText.split(" ");
+  const days = parseInt(timeParts[0]) || 0;
+  const hours = parseInt(timeParts[1]) || 0;
+  const minutes = parseInt(timeParts[2]) || 0;
+  
+  return days * 24 * 60 + hours * 60 + minutes; 
+}
+
+
+function sortTaskElementsByRemainingTime(taskElements) {
+  return Array.from(taskElements).sort((a, b) => {
+    const remainingTimeA = a.querySelector(".task-remaining-time").textContent;
+    const remainingTimeB = b.querySelector(".task-remaining-time").textContent;
+    return getRemainingTimeValue(remainingTimeA) - getRemainingTimeValue(remainingTimeB);
+  });
+}
+
+remainingTimeHeader.addEventListener("click", () => {
+  const taskElements = taskList.children;
+  const sortedTasks = sortTaskElementsByRemainingTime(taskElements);
+  taskList.innerHTML = ''; 
+  sortedTasks.forEach(taskElement => taskList.appendChild(taskElement)); 
+});
+
 
 
 

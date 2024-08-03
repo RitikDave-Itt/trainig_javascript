@@ -61,22 +61,23 @@
       <div class="titles">
         <div class="title status">Status</div>
 
-        <div class="title">Tasks</div>
-        <div class="title">Date</div>
-        <div class="title">Remaining Time</div>
+        <div class="title tasks-header">Tasks</div>
+        <div class="title date-header">Date</div>
+        <div class="title remaining-time-header">Remaining Time</div>
       </div>
       <div class="task-list">
         
         <template class="template">
           <div class="task">
-            <div class="edit">
-              <button class="task-close">❌</button>
-              <!-- <button class="task-edit">✎</button> -->
-            </div>
+           
             <div class="task-status"><input type="checkbox" class="status-check-box"></div>
             <div class="task-text"></div>
             <div class="task-time"></div>
             <div class="task-remaining-time"></div>
+            <div class="edit">
+              <button class="task-close">X</button>
+              <!-- <button class="task-edit">✎</button> -->
+            </div>
           </div>
         </template>
       </div>

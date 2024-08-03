@@ -400,26 +400,28 @@ body {
 
 .task .edit {
     visibility: hidden;
-    height: 100%;
+    height: 70%;
     overflow: hidden;
     display: flex;
-    justify-content: space-evenly;
-    width: 10%;
+    align-items: center;
+    top: 50%;
+    transform: translate(0,-50%);
+
+    
+
     position: absolute;
-    top: -28%;
-    right: 0%;
+    right: 3%;
     transition: visibility 0.1s ease;
 
     button{
-        background-color: var(--color-dark-1);
+        background-color: red;
+        aspect-ratio: 1;
         border-radius: 10px;
-        width: 40%;
-        height:100%;
-
+        text-align: center;
         color: white;
     }
     button:hover{
-        background-color: var(--color-dark-5);
+        background-color: darkred;
     }
 }
 

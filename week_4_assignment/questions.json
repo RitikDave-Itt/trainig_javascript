@@ -1,0 +1,2732 @@
+[
+  {
+    "id": "q1",
+    "question": "What is the capital of France?",
+    "options": [
+      "Paris",
+      "London",
+      "Rome",
+      "Berlin"
+    ],
+    "answer": "Paris",
+    "level": 1,
+    "category": "geography"
+  },
+  {
+    "id": "q2",
+    "question": "Which planet is known as the Red Planet?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Jupiter",
+      "Saturn"
+    ],
+    "answer": "Mars",
+    "level": 1,
+    "category": "space"
+  },
+  {
+    "id": "q3",
+    "question": "Who wrote 'To Kill a Mockingbird'?",
+    "options": [
+      "Harper Lee",
+      "Mark Twain",
+      "Ernest Hemingway",
+      "F. Scott Fitzgerald"
+    ],
+    "answer": "Harper Lee",
+    "level": 2,
+    "category": "history"
+  },
+  {
+    "id": "q4",
+    "question": "What is the chemical symbol for water?",
+    "options": [
+      "H2O",
+      "CO2",
+      "O2",
+      "NaCl"
+    ],
+    "answer": "H2O",
+    "level": 2,
+    "category": "science"
+  },
+  {
+    "id": "q5",
+    "question": "Which continent is the Sahara Desert located in?",
+    "options": [
+      "Africa",
+      "Asia",
+      "Australia",
+      "South America"
+    ],
+    "answer": "Africa",
+    "level": 3,
+    "category": "geography"
+  },
+  {
+    "id": "q6",
+    "question": "Who painted the Mona Lisa?",
+    "options": [
+      "Leonardo da Vinci",
+      "Vincent Van Gogh",
+      "Pablo Picasso",
+      "Claude Monet"
+    ],
+    "answer": "Leonardo da Vinci",
+    "level": 3,
+    "category": "history"
+  },
+  {
+    "id": "q7",
+    "question": "What is the hardest natural material on Earth?",
+    "options": [
+      "Diamond",
+      "Gold",
+      "Iron",
+      "Platinum"
+    ],
+    "answer": "Diamond",
+    "level": 4,
+    "category": "science"
+  },
+  {
+    "id": "q8",
+    "question": "Which element has the atomic number 79?",
+    "options": [
+      "Gold",
+      "Silver",
+      "Platinum",
+      "Lead"
+    ],
+    "answer": "Gold",
+    "level": 4,
+    "category": "science"
+  },
+  {
+    "id": "q9",
+    "question": "What is the capital of Japan?",
+    "options": [
+      "Tokyo",
+      "Osaka",
+      "Kyoto",
+      "Hiroshima"
+    ],
+    "answer": "Tokyo",
+    "level": 5,
+    "category": "geography"
+  },
+  {
+    "id": "q10",
+    "question": "Which ocean is the largest by surface area?",
+    "options": [
+      "Pacific Ocean",
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean"
+    ],
+    "answer": "Pacific Ocean",
+    "level": 5,
+    "category": "geography"
+  },
+  {
+    "id": "q11",
+    "question": "What is the chemical formula for table salt?",
+    "options": [
+      "NaCl",
+      "KCl",
+      "CaCl2",
+      "MgCl2"
+    ],
+    "answer": "NaCl",
+    "level": 6,
+    "category": "science"
+  },
+  {
+    "id": "q12",
+    "question": "What is the largest planet in our solar system?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Neptune",
+      "Uranus"
+    ],
+    "answer": "Jupiter",
+    "level": 6,
+    "category": "space"
+  },
+  {
+    "id": "q13",
+    "question": "Who wrote 'Pride and Prejudice'?",
+    "options": [
+      "Jane Austen",
+      "Charlotte Brontë",
+      "Emily Dickinson",
+      "Mary Shelley"
+    ],
+    "answer": "Jane Austen",
+    "level": 6,
+    "category": "history"
+  },
+  {
+    "id": "q14",
+    "question": "What is the capital of Canada?",
+    "options": [
+      "Toronto",
+      "Vancouver",
+      "Ottawa",
+      "Montreal"
+    ],
+    "answer": "Ottawa",
+    "level": 7,
+    "category": "geography"
+  },
+  {
+    "id": "q15",
+    "question": "Which is the largest desert in the world?",
+    "options": [
+      "Sahara",
+      "Arabian",
+      "Gobi",
+      "Antarctic"
+    ],
+    "answer": "Antarctic",
+    "level": 7,
+    "category": "geography"
+  },
+  {
+    "id": "q16",
+    "question": "Which planet is known as the morning star?",
+    "options": [
+      "Mercury",
+      "Venus",
+      "Mars",
+      "Jupiter"
+    ],
+    "answer": "Venus",
+    "level": 8,
+    "category": "space"
+  },
+  {
+    "id": "q17",
+    "question": "What is the speed of light in a vacuum?",
+    "options": [
+      "300,000 km/s",
+      "150,000 km/s",
+      "450,000 km/s",
+      "600,000 km/s"
+    ],
+    "answer": "300,000 km/s",
+    "level": 8,
+    "category": "science"
+  },
+  {
+    "id": "q18",
+    "question": "Who painted 'Starry Night'?",
+    "options": [
+      "Vincent Van Gogh",
+      "Claude Monet",
+      "Pablo Picasso",
+      "Leonardo da Vinci"
+    ],
+    "answer": "Vincent Van Gogh",
+    "level": 9,
+    "category": "history"
+  },
+  {
+    "id": "q19",
+    "question": "What is the capital of Brazil?",
+    "options": [
+      "Rio de Janeiro",
+      "São Paulo",
+      "Brasília",
+      "Salvador"
+    ],
+    "answer": "Brasília",
+    "level": 1,
+    "category": "geography"
+  },
+  {
+    "id": "q20",
+    "question": "Which planet is known as the 'Ice Giant'?",
+    "options": [
+      "Uranus",
+      "Neptune",
+      "Saturn",
+      "Jupiter"
+    ],
+    "answer": "Uranus",
+    "level": 2,
+    "category": "space"
+  },
+  {
+    "id": "q21",
+    "question": "What is the chemical formula for methane?",
+    "options": [
+      "CH4",
+      "C2H6",
+      "C3H8",
+      "C4H10"
+    ],
+    "answer": "CH4",
+    "level": 5,
+    "category": "science"
+  },
+  {
+    "id": "q22",
+    "question": "What is the most common gas in the Earth's atmosphere?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon Dioxide",
+      "Argon"
+    ],
+    "answer": "Nitrogen",
+    "level": 4,
+    "category": "science"
+  },
+  {
+    "id": "q23",
+    "question": "Who invented the light bulb?",
+    "options": [
+      "Thomas Edison",
+      "Alexander Graham Bell",
+      "Nikola Tesla",
+      "Michael Faraday"
+    ],
+    "answer": "Thomas Edison",
+    "level": 5,
+    "category": "science"
+  },
+  {
+    "id": "q24",
+    "question": "What is the name of the largest coral reef system in the world?",
+    "options": [
+      "Great Barrier Reef",
+      "Red Sea Reef",
+      "Andaman Reef",
+      "Mesoamerican Reef"
+    ],
+    "answer": "Great Barrier Reef",
+    "level": 1,
+    "category": "geography"
+  },
+  {
+    "id": "q25",
+    "question": "Which country is the largest by land area?",
+    "options": [
+      "United States",
+      "Canada",
+      "China",
+      "Russia"
+    ],
+    "answer": "Russia",
+    "level": 2,
+    "category": "geography"
+  },
+  {
+    "id": "q26",
+    "question": "Which organ is responsible for pumping blood throughout the body?",
+    "options": [
+      "Liver",
+      "Lung",
+      "Kidney",
+      "Heart"
+    ],
+    "answer": "Heart",
+    "level": 4,
+    "category": "biology"
+  },
+  {
+    "id": "q27",
+    "question": "Which famous scientist developed the theory of evolution?",
+    "options": [
+      "Charles Darwin",
+      "Louis Pasteur",
+      "Gregor Mendel",
+      "James Watson"
+    ],
+    "answer": "Charles Darwin",
+    "level": 8,
+    "category": "science"
+  },
+  {
+    "id": "q28",
+    "question": "What is the primary function of red blood cells?",
+    "options": [
+      "Fight infection",
+      "Carry oxygen",
+      "Clot blood",
+      "Digest food"
+    ],
+    "answer": "Carry oxygen",
+    "level": 8,
+    "category": "biology"
+  },
+  {
+    "id": "q29",
+    "question": "What is the capital city of Italy?",
+    "options": [
+      "Venice",
+      "Florence",
+      "Rome",
+      "Milan"
+    ],
+    "answer": "Rome",
+    "level": 9,
+    "category": "geography"
+  },
+  {
+    "id": "q30",
+    "question": "What is the most populous city in the world?",
+    "options": [
+      "New York",
+      "Tokyo",
+      "Shanghai",
+      "Mumbai"
+    ],
+    "answer": "Tokyo",
+    "level": 9,
+    "category": "geography"
+  },
+  {
+    "id": "q31",
+    "question": "What is the powerhouse of the cell?",
+    "options": [
+      "Nucleus",
+      "Mitochondria",
+      "Ribosome",
+      "Endoplasmic Reticulum"
+    ],
+    "answer": "Mitochondria",
+    "level": 3,
+    "category": "biology"
+  },
+  {
+    "id": "q32",
+    "question": "Who was the first President of the United States?",
+    "options": [
+      "George Washington",
+      "Thomas Jefferson",
+      "Abraham Lincoln",
+      "John Adams"
+    ],
+    "answer": "George Washington",
+    "level": 2,
+    "category": "politics"
+  },
+  {
+    "id": "q33",
+    "question": "What is the largest organ in the human body?",
+    "options": [
+      "Heart",
+      "Skin",
+      "Liver",
+      "Lung"
+    ],
+    "answer": "Skin",
+    "level": 4,
+    "category": "biology"
+  },
+  {
+    "id": "q34",
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "options": [
+      "Japan",
+      "China",
+      "Thailand",
+      "South Korea"
+    ],
+    "answer": "Japan",
+    "level": 3,
+    "category": "geography"
+  },
+  {
+    "id": "q35",
+    "question": "Who was the British Prime Minister during World War II?",
+    "options": [
+      "Winston Churchill",
+      "Neville Chamberlain",
+      "Margaret Thatcher",
+      "Tony Blair"
+    ],
+    "answer": "Winston Churchill",
+    "level": 6,
+    "category": "politics"
+  },
+  {
+    "id": "q36",
+    "question": "What is the smallest planet in our solar system?",
+    "options": [
+      "Mercury",
+      "Mars",
+      "Venus",
+      "Pluto"
+    ],
+    "answer": "Mercury",
+    "level": 5,
+    "category": "space"
+  },
+  {
+    "id": "q37",
+    "question": "What substance makes up the majority of the human brain?",
+    "options": [
+      "Fat",
+      "Protein",
+      "Water",
+      "Calcium"
+    ],
+    "answer": "Water",
+    "level": 6,
+    "category": "biology"
+  },
+  {
+    "id": "q38",
+    "question": "What is the capital of Australia?",
+    "options": [
+      "Sydney",
+      "Melbourne",
+      "Canberra",
+      "Brisbane"
+    ],
+    "answer": "Canberra",
+    "level": 2,
+    "category": "geography"
+  },
+  {
+    "id": "q39",
+    "question": "Which famous ship sank on its maiden voyage in 1912?",
+    "options": [
+      "Titanic",
+      "Lusitania",
+      "Britannic",
+      "Olympic"
+    ],
+    "answer": "Titanic",
+    "level": 7,
+    "category": "history"
+  },
+  {
+    "id": "q40",
+    "question": "What is the speed of sound in air at sea level?",
+    "options": [
+      "343 m/s",
+      "299,792 km/s",
+      "1235 km/h",
+      "1,225 km/h"
+    ],
+    "answer": "343 m/s",
+    "level": 7,
+    "category": "science"
+  },
+  {
+    "id": "q41",
+    "question": "What is the capital of Egypt?",
+    "options": [
+      "Cairo",
+      "Alexandria",
+      "Giza",
+      "Luxor"
+    ],
+    "answer": "Cairo",
+    "level": 1,
+    "category": "geography"
+  },
+  {
+    "id": "q42",
+    "question": "Which famous physicist developed the theory of relativity?",
+    "options": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Niels Bohr",
+      "Galileo Galilei"
+    ],
+    "answer": "Albert Einstein",
+    "level": 6,
+    "category": "science"
+  },
+  {
+    "id": "q43",
+    "question": "What is the largest mammal in the world?",
+    "options": [
+      "Elephant",
+      "Blue Whale",
+      "Giraffe",
+      "Hippopotamus"
+    ],
+    "answer": "Blue Whale",
+    "level": 4,
+    "category": "biology"
+  },
+  {
+    "id": "q44",
+    "question": "Who was the first woman to win a Nobel Prize?",
+    "options": [
+      "Marie Curie",
+      "Rosalind Franklin",
+      "Ada Lovelace",
+      "Dorothy Hodgkin"
+    ],
+    "answer": "Marie Curie",
+    "level": 5,
+    "category": "science"
+  },
+  {
+    "id": "q45",
+    "question": "Which U.S. state is known as the Sunshine State?",
+    "options": [
+      "California",
+      "Texas",
+      "Florida",
+      "Hawaii"
+    ],
+    "answer": "Florida",
+    "level": 3,
+    "category": "geography"
+  },
+  {
+    "id": "q46",
+    "question": "Who was the leader of the Soviet Union during World War II?",
+    "options": [
+      "Joseph Stalin",
+      "Leon Trotsky",
+      "Vladimir Lenin",
+      "Nikita Khrushchev"
+    ],
+    "answer": "Joseph Stalin",
+    "level": 6,
+    "category": "politics"
+  },
+  {
+    "id": "q47",
+    "question": "Which planet is known for its prominent ring system?",
+    "options": [
+      "Saturn",
+      "Jupiter",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn",
+    "level": 4,
+    "category": "space"
+  },
+  {
+    "id": "q48",
+    "question": "What is the longest river in the world?",
+    "options": [
+      "Nile",
+      "Amazon",
+      "Yangtze",
+      "Mississippi"
+    ],
+    "answer": "Nile",
+    "level": 5,
+    "category": "geography"
+  },
+  {
+    "id": "q49",
+    "question": "Which famous scientist is known for his laws of motion?",
+    "options": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Galileo Galilei",
+      "Nikola Tesla"
+    ],
+    "answer": "Isaac Newton",
+    "level": 6,
+    "category": "science"
+  },
+  {
+    "id": "q50",
+    "question": "What is the name of the first human to journey into outer space?",
+    "options": [
+      "Yuri Gagarin",
+      "Neil Armstrong",
+      "Buzz Aldrin",
+      "John Glenn"
+    ],
+    "answer": "Yuri Gagarin",
+    "level": 7,
+    "category": "space"
+  },
+  {
+    "id": "q51",
+    "question": "Who was the first Emperor of China?",
+    "options": [
+      "Qin Shi Huang",
+      "Liu Bang",
+      "Han Wudi",
+      "Tang Taizong"
+    ],
+    "answer": "Qin Shi Huang",
+    "level": 5,
+    "category": "history"
+  },
+  {
+    "id": "q52",
+    "question": "Which gas is essential for human respiration?",
+    "options": [
+      "Oxygen",
+      "Nitrogen",
+      "Carbon Dioxide",
+      "Hydrogen"
+    ],
+    "answer": "Oxygen",
+    "level": 2,
+    "category": "biology"
+  },
+  {
+    "id": "q53",
+    "question": "Which U.S. President issued the Emancipation Proclamation?",
+    "options": [
+      "Abraham Lincoln",
+      "Andrew Johnson",
+      "Ulysses S. Grant",
+      "Theodore Roosevelt"
+    ],
+    "answer": "Abraham Lincoln",
+    "level": 7,
+    "category": "politics"
+  },
+  {
+    "id": "q54",
+    "question": "Which continent is known as the 'Dark Continent'?",
+    "options": [
+      "Africa",
+      "Asia",
+      "South America",
+      "Australia"
+    ],
+    "answer": "Africa",
+    "level": 6,
+    "category": "geography"
+  },
+  {
+    "id": "q55",
+    "question": "Who was the first female Prime Minister of the United Kingdom?",
+    "options": [
+      "Margaret Thatcher",
+      "Theresa May",
+      "Priti Patel",
+      "Harriet Harman"
+    ],
+    "answer": "Margaret Thatcher",
+    "level": 6,
+    "category": "politics"
+  },
+  {
+    "id": "q56",
+    "question": "What is the chemical symbol for gold?",
+    "options": [
+      "Au",
+      "Ag",
+      "Pb",
+      "Fe"
+    ],
+    "answer": "Au",
+    "level": 3,
+    "category": "science"
+  },
+  {
+    "id": "q57",
+    "question": "Which layer of the Earth is made of molten rock?",
+    "options": [
+      "Crust",
+      "Mantle",
+      "Core",
+      "Lithosphere"
+    ],
+    "answer": "Mantle",
+    "level": 6,
+    "category": "science"
+  },
+  {
+    "id": "q58",
+    "question": "What is the smallest bone in the human body?",
+    "options": [
+      "Stapes",
+      "Incus",
+      "Malleus",
+      "Clavicle"
+    ],
+    "answer": "Stapes",
+    "level": 7,
+    "category": "biology"
+  },
+  {
+    "id": "q59",
+    "question": "Who was the famous queen of ancient Egypt known for her beauty?",
+    "options": [
+      "Cleopatra",
+      "Nefertiti",
+      "Hatshepsut",
+      "Tiy"
+    ],
+    "answer": "Cleopatra",
+    "level": 5,
+    "category": "history"
+  },
+  {
+    "id": "q60",
+    "question": "Which chemical element is named after the planet Uranus?",
+    "options": [
+      "Uranium",
+      "Neptunium",
+      "Plutonium",
+      "Thorium"
+    ],
+    "answer": "Uranium",
+    "level": 7,
+    "category": "science"
+  },
+  {
+    "id": "q61",
+    "question": "What is the longest river in Asia?",
+    "options": [
+      "Yangtze",
+      "Ganges",
+      "Mekong",
+      "Lena"
+    ],
+    "answer": "Yangtze",
+    "level": 5,
+    "category": "geography"
+  },
+  {
+    "id": "q62",
+    "question": "Who was the leader of the civil rights movement in the 1960s?",
+    "options": [
+      "Martin Luther King Jr.",
+      "Malcolm X",
+      "Rosa Parks",
+      "Nelson Mandela"
+    ],
+    "answer": "Martin Luther King Jr.",
+    "level": 8,
+    "category": "politics"
+  },
+  {
+    "id": "q63",
+    "question": "What is the capital of Argentina?",
+    "options": [
+      "Buenos Aires",
+      "Santiago",
+      "Lima",
+      "Montevideo"
+    ],
+    "answer": "Buenos Aires",
+    "level": 2,
+    "category": "geography"
+  },
+  {
+    "id": "q64",
+    "question": "Who developed the polio vaccine?",
+    "options": [
+      "Jonas Salk",
+      "Louis Pasteur",
+      "Albert Calmette",
+      "Edward Jenner"
+    ],
+    "answer": "Jonas Salk",
+    "level": 5,
+    "category": "science"
+  },
+  {
+    "id": "q65",
+    "question": "What is the capital of South Korea?",
+    "options": [
+      "Seoul",
+      "Busan",
+      "Incheon",
+      "Gwangju"
+    ],
+    "answer": "Seoul",
+    "level": 3,
+    "category": "geography"
+  },
+  {
+    "id": "q66",
+    "question": "Which famous scientist is known for his theory of gravity?",
+    "options": [
+      "Isaac Newton",
+      "Albert Einstein",
+      "Galileo Galilei",
+      "Niels Bohr"
+    ],
+    "answer": "Isaac Newton",
+    "level": 4,
+    "category": "science"
+  },
+  {
+    "id": "q67",
+    "question": "Which US state is known as the 'Empire State'?",
+    "options": [
+      "California",
+      "Florida",
+      "New York",
+      "Texas"
+    ],
+    "answer": "New York",
+    "level": 2,
+    "category": "geography"
+  },
+  {
+    "id": "q68",
+    "question": "What is the primary source of energy for the Earth?",
+    "options": [
+      "The Moon",
+      "The Sun",
+      "The Stars",
+      "The Oceans"
+    ],
+    "answer": "The Sun",
+    "level": 3,
+    "category": "science"
+  },
+  {
+    "id": "q69",
+    "question": "What is the capital of Norway?",
+    "options": [
+      "Oslo",
+      "Stockholm",
+      "Helsinki",
+      "Copenhagen"
+    ],
+    "answer": "Oslo",
+    "level": 4,
+    "category": "geography"
+  },
+  {
+    "id": "q70",
+    "question": "Who is known as the father of modern physics?",
+    "options": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "James Clerk Maxwell",
+      "Niels Bohr"
+    ],
+    "answer": "Albert Einstein",
+    "level": 8,
+    "category": "science"
+  },
+  {
+    "id": "q71",
+    "question": "Which planet is known for its Great Red Spot?",
+    "options": [
+      "Jupiter",
+      "Mars",
+      "Saturn",
+      "Neptune"
+    ],
+    "answer": "Jupiter",
+    "level": 6,
+    "category": "space"
+  },
+  {
+    "id": "q72",
+    "question": "What is the largest island in the world?",
+    "options": [
+      "Greenland",
+      "New Guinea",
+      "Borneo",
+      "Madagascar"
+    ],
+    "answer": "Greenland",
+    "level": 5,
+    "category": "geography"
+  },
+  {
+    "id": "q73",
+    "question": "What is the name of the process by which plants make their own food?",
+    "options": [
+      "Photosynthesis",
+      "Respiration",
+      "Transpiration",
+      "Fermentation"
+    ],
+    "answer": "Photosynthesis",
+    "level": 3,
+    "category": "biology"
+  },
+  {
+    "id": "q74",
+    "question": "Who wrote 'The Iliad' and 'The Odyssey'?",
+    "options": [
+      "Homer",
+      "Sophocles",
+      "Virgil",
+      "Aristotle"
+    ],
+    "answer": "Homer",
+    "level": 7,
+    "category": "history"
+  },
+  {
+    "id": "q75",
+    "question": "Which American inventor is credited with inventing the phonograph?",
+    "options": [
+      "Thomas Edison",
+      "Alexander Graham Bell",
+      "Nikola Tesla",
+      "Elijah McCoy"
+    ],
+    "answer": "Thomas Edison",
+    "level": 4,
+    "category": "history"
+  },
+  {
+    "id": "q76",
+    "question": "What is the currency of Japan?",
+    "options": [
+      "Yen",
+      "Won",
+      "Dollar",
+      "Euro"
+    ],
+    "answer": "Yen",
+    "level": 2,
+    "category": "geography"
+  },
+  {
+    "id": "q77",
+    "question": "Who is known as the father of psychoanalysis?",
+    "options": [
+      "Sigmund Freud",
+      "Carl Jung",
+      "Ivan Pavlov",
+      "Jean Piaget"
+    ],
+    "answer": "Sigmund Freud",
+    "level": 7,
+    "category": "science"
+  },
+  {
+    "id": "q78",
+    "question": "What is the largest country by population?",
+    "options": [
+      "India",
+      "United States",
+      "China",
+      "Indonesia"
+    ],
+    "answer": "China",
+    "level": 3,
+    "category": "geography"
+  },
+  {
+    "id": "q79",
+    "question": "Which famous battle was fought in 1066?",
+    "options": [
+      "Battle of Hastings",
+      "Battle of Agincourt",
+      "Battle of Waterloo",
+      "Battle of Gettysburg"
+    ],
+    "answer": "Battle of Hastings",
+    "level": 6,
+    "category": "history"
+  },
+  {
+    "id": "q80",
+    "question": "What is the most abundant element in the Earth's crust?",
+    "options": [
+      "Oxygen",
+      "Silicon",
+      "Aluminum",
+      "Iron"
+    ],
+    "answer": "Oxygen",
+    "level": 4,
+    "category": "science"
+  },
+  {
+    "id": "q81",
+    "question": "Which sea is the largest in the world by surface area?",
+    "options": [
+      "Mediterranean Sea",
+      "Caribbean Sea",
+      "South China Sea",
+      "Red Sea"
+    ],
+    "answer": "South China Sea",
+    "level": 5,
+    "category": "geography"
+  },
+  {
+    "id": "q82",
+    "question": "Who was the first person to walk on the Moon?",
+    "options": [
+      "Neil Armstrong",
+      "Buzz Aldrin",
+      "Michael Collins",
+      "Yuri Gagarin"
+    ],
+    "answer": "Neil Armstrong",
+    "level": 8,
+    "category": "space"
+  },
+  {
+    "id": "q83",
+    "question": "What is the chemical symbol for silver?",
+    "options": [
+      "Ag",
+      "Au",
+      "Pb",
+      "Hg"
+    ],
+    "answer": "Ag",
+    "level": 3,
+    "category": "science"
+  },
+  {
+    "id": "q84",
+    "question": "Which organ in the human body is responsible for filtering blood?",
+    "options": [
+      "Liver",
+      "Heart",
+      "Kidney",
+      "Lung"
+    ],
+    "answer": "Kidney",
+    "level": 5,
+    "category": "biology"
+  },
+  {
+    "id": "q85",
+    "question": "What is the largest desert in Africa?",
+    "options": [
+      "Sahara",
+      "Kalahari",
+      "Namib",
+      "Libyan"
+    ],
+    "answer": "Sahara",
+    "level": 4,
+    "category": "geography"
+  },
+  {
+    "id": "q86",
+    "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+    "options": [
+      "Amelia Earhart",
+      "Bessie Coleman",
+      "Harriet Quimby",
+      "Jacqueline Cochran"
+    ],
+    "answer": "Amelia Earhart",
+    "level": 6,
+    "category": "history"
+  },
+  {
+    "id": "q87",
+    "question": "What is the most common type of star in the universe?",
+    "options": [
+      "Red Dwarf",
+      "Blue Giant",
+      "White Dwarf",
+      "Neutron Star"
+    ],
+    "answer": "Red Dwarf",
+    "level": 7,
+    "category": "space"
+  },
+  {
+    "id": "q88",
+    "question": "Which part of the brain is responsible for higher mental functions like reasoning and planning?",
+    "options": [
+      "Frontal Lobe",
+      "Parietal Lobe",
+      "Occipital Lobe",
+      "Temporal Lobe"
+    ],
+    "answer": "Frontal Lobe",
+    "level": 8,
+    "category": "biology"
+  },
+  {
+    "id": "q89",
+    "question": "What is the primary language spoken in Brazil?",
+    "options": [
+      "Spanish",
+      "Portuguese",
+      "English",
+      "French"
+    ],
+    "answer": "Portuguese",
+    "level": 2,
+    "category": "geography"
+  },
+  {
+    "id": "q90",
+    "question": "Who was the famous Greek philosopher who taught Alexander the Great?",
+    "options": [
+      "Aristotle",
+      "Plato",
+      "Socrates",
+      "Pythagoras"
+    ],
+    "answer": "Aristotle",
+    "level": 6,
+    "category": "history"
+  },
+  {
+    "id": "q91",
+    "question": "What is the name of the galaxy that contains the Earth?",
+    "options": [
+      "Milky Way",
+      "Andromeda",
+      "Whirlpool",
+      "Pinwheel"
+    ],
+    "answer": "Milky Way",
+    "level": 3,
+    "category": "space"
+  },
+  {
+    "id": "q92",
+    "question": "What is the most abundant gas in the Earth's atmosphere?",
+    "options": [
+      "Nitrogen",
+      "Oxygen",
+      "Carbon Dioxide",
+      "Argon"
+    ],
+    "answer": "Nitrogen",
+    "level": 2,
+    "category": "science"
+  },
+  {
+    "id": "q93",
+    "question": "What is the chemical symbol for potassium?",
+    "options": [
+      "K",
+      "P",
+      "Po",
+      "Pr"
+    ],
+    "answer": "K",
+    "level": 4,
+    "category": "science"
+  },
+  {
+    "id": "q94",
+    "question": "Which famous scientist is known for his work on electromagnetism?",
+    "options": [
+      "Michael Faraday",
+      "James Clerk Maxwell",
+      "Nikola Tesla",
+      "Albert Einstein"
+    ],
+    "answer": "Michael Faraday",
+    "level": 7,
+    "category": "science"
+  },
+  {
+    "id": "q95",
+    "question": "Who was the first emperor of Japan?",
+    "options": [
+      "Jimmu",
+      "Meiji",
+      "Taisho",
+      "Showa"
+    ],
+    "answer": "Jimmu",
+    "level": 8,
+    "category": "history"
+  },
+  {
+    "id": "q96",
+    "question": "What is the primary function of the human liver?",
+    "options": [
+      "Detoxification",
+      "Oxygen Transport",
+      "Digestion",
+      "Temperature Regulation"
+    ],
+    "answer": "Detoxification",
+    "level": 5,
+    "category": "biology"
+  },
+  {
+    "id": "q97",
+    "question": "Which US state is known as the 'Golden State'?",
+    "options": [
+      "California",
+      "New York",
+      "Texas",
+      "Florida"
+    ],
+    "answer": "California",
+    "level": 2,
+    "category": "geography"
+  },
+  {
+    "id": "q98",
+    "question": "What is the capital city of Canada?",
+    "options": [
+      "Toronto",
+      "Montreal",
+      "Vancouver",
+      "Ottawa"
+    ],
+    "answer": "Ottawa",
+    "level": 3,
+    "category": "geography"
+  },
+  {
+    "id": "q99",
+    "question": "Which famous astronomer proposed the heliocentric model of the solar system?",
+    "options": [
+      "Nicolaus Copernicus",
+      "Galileo Galilei",
+      "Johannes Kepler",
+      "Isaac Newton"
+    ],
+    "answer": "Nicolaus Copernicus",
+    "level": 6,
+    "category": "space"
+  },
+  {
+    "id": "q100",
+    "question": "What is the most spoken language in the world?",
+    "options": [
+      "Mandarin",
+      "Spanish",
+      "English",
+      "Hindi"
+    ],
+    "answer": "Mandarin",
+    "level": 4,
+    "category": "geography"
+  },
+  {
+    "id": "q101",
+    "question": "Who wrote the play 'Romeo and Juliet'?",
+    "options": [
+      "William Shakespeare",
+      "Charles Dickens",
+      "Jane Austen",
+      "Mark Twain"
+    ],
+    "answer": "William Shakespeare",
+    "level": 1,
+    "category": "politics"
+  },
+  {
+    "id": "q102",
+    "question": "What is the largest planet in our solar system?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Earth",
+      "Mars"
+    ],
+    "answer": "Jupiter",
+    "level": 2,
+    "category": "space"
+  },
+  {
+    "id": "q103",
+    "question": "What chemical element has the symbol 'Au'?",
+    "options": [
+      "Gold",
+      "Silver",
+      "Iron",
+      "Copper"
+    ],
+    "answer": "Gold",
+    "level": 3,
+    "category": "science"
+  },
+  {
+    "id": "q104",
+    "question": "In what year did the Titanic sink?",
+    "options": [
+      "1912",
+      "1905",
+      "1918",
+      "1923"
+    ],
+    "answer": "1912",
+    "level": 4,
+    "category": "history"
+  },
+  {
+    "id": "q105",
+    "question": "Which country is known as the Land of the Rising Sun?",
+    "options": [
+      "Japan",
+      "China",
+      "South Korea",
+      "Thailand"
+    ],
+    "answer": "Japan",
+    "level": 5,
+    "category": "geography"
+  },
+  {
+    "id": "q106",
+    "question": "Who is the author of '1984'?",
+    "options": [
+      "George Orwell",
+      "Aldous Huxley",
+      "J.K. Rowling",
+      "Ernest Hemingway"
+    ],
+    "answer": "George Orwell",
+    "level": 6,
+    "category": "literature"
+  },
+  {
+    "id": "q107",
+    "question": "What is the chemical formula for water?",
+    "options": [
+      "H2O",
+      "CO2",
+      "NaCl",
+      "O2"
+    ],
+    "answer": "H2O",
+    "level": 7,
+    "category": "science"
+  },
+  {
+    "id": "q108",
+    "question": "Which city hosted the 2016 Summer Olympics?",
+    "options": [
+      "Rio de Janeiro",
+      "London",
+      "Beijing",
+      "Sydney"
+    ],
+    "answer": "Rio de Janeiro",
+    "level": 8,
+    "category": "sports"
+  },
+  {
+    "id": "q109",
+    "question": "What is the currency of Japan?",
+    "options": [
+      "Yen",
+      "Won",
+      "Dollar",
+      "Euro"
+    ],
+    "answer": "Yen",
+    "level": 9,
+    "category": "geography"
+  },
+  {
+    "id": "q110",
+    "question": "Which planet is known as the Red Planet?",
+    "options": [
+      "Mars",
+      "Venus",
+      "Saturn",
+      "Mercury"
+    ],
+    "answer": "Mars",
+    "level": 10,
+    "category": "space"
+  },
+  {
+    "id": "q111",
+    "question": "Who was the first President of the United States?",
+    "options": [
+      "George Washington",
+      "Thomas Jefferson",
+      "Abraham Lincoln",
+      "John Adams"
+    ],
+    "answer": "George Washington",
+    "level": 1,
+    "category": "politics"
+  },
+  {
+    "id": "q112",
+    "question": "Which element has the atomic number 1?",
+    "options": [
+      "Hydrogen",
+      "Helium",
+      "Oxygen",
+      "Carbon"
+    ],
+    "answer": "Hydrogen",
+    "level": 2,
+    "category": "science"
+  },
+  {
+    "id": "q113",
+    "question": "What ancient civilization built the Machu Picchu complex in Peru?",
+    "options": [
+      "Inca",
+      "Aztec",
+      "Mayan",
+      "Olmec"
+    ],
+    "answer": "Inca",
+    "level": 3,
+    "category": "history"
+  },
+  {
+    "id": "q114",
+    "question": "Which planet is known for its rings?",
+    "options": [
+      "Saturn",
+      "Jupiter",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn",
+    "level": 4,
+    "category": "space"
+  },
+  {
+    "id": "q115",
+    "question": "Which political party did Abraham Lincoln represent?",
+    "options": [
+      "Republican",
+      "Democratic",
+      "Whig",
+      "Federalist"
+    ],
+    "answer": "Republican",
+    "level": 5,
+    "category": "politics"
+  },
+  {
+    "id": "q116",
+    "question": "What is the chemical symbol for Sodium?",
+    "options": [
+      "Na",
+      "So",
+      "S",
+      "N"
+    ],
+    "answer": "Na",
+    "level": 6,
+    "category": "science"
+  },
+  {
+    "id": "q117",
+    "question": "Who was the first woman to win a Nobel Prize?",
+    "options": [
+      "Marie Curie",
+      "Ada Lovelace",
+      "Rosalind Franklin",
+      "Jane Goodall"
+    ],
+    "answer": "Marie Curie",
+    "level": 7,
+    "category": "science"
+  },
+  {
+    "id": "q118",
+    "question": "Which historical figure is known for the 'I Have a Dream' speech?",
+    "options": [
+      "Martin Luther King Jr.",
+      "Malcolm X",
+      "John F. Kennedy",
+      "Nelson Mandela"
+    ],
+    "answer": "Martin Luther King Jr.",
+    "level": 8,
+    "category": "history"
+  },
+  {
+    "id": "q119",
+    "question": "Which space agency was responsible for the Apollo missions?",
+    "options": [
+      "NASA",
+      "ESA",
+      "Roscosmos",
+      "JAXA"
+    ],
+    "answer": "NASA",
+    "level": 9,
+    "category": "space"
+  },
+  {
+    "id": "q120",
+    "question": "Who was the British Prime Minister during World War II?",
+    "options": [
+      "Winston Churchill",
+      "Neville Chamberlain",
+      "Clement Attlee",
+      "Margaret Thatcher"
+    ],
+    "answer": "Winston Churchill",
+    "level": 10,
+    "category": "politics"
+  },
+  {
+    "id": "q121",
+    "question": "What is the hardest natural substance on Earth?",
+    "options": [
+      "Diamond",
+      "Gold",
+      "Iron",
+      "Platinum"
+    ],
+    "answer": "Diamond",
+    "level": 1,
+    "category": "science"
+  },
+  {
+    "id": "q122",
+    "question": "What was the name of the ship that carried the Pilgrims to America in 1620?",
+    "options": [
+      "Mayflower",
+      "Santa Maria",
+      "Nina",
+      "Pinta"
+    ],
+    "answer": "Mayflower",
+    "level": 2,
+    "category": "history"
+  },
+  {
+    "id": "q123",
+    "question": "Which war ended with the signing of the Treaty of Versailles?",
+    "options": [
+      "World War I",
+      "World War II",
+      "The Korean War",
+      "The Vietnam War"
+    ],
+    "answer": "World War I",
+    "level": 3,
+    "category": "history"
+  },
+  {
+    "id": "q124",
+    "question": "What is the name of the first artificial satellite launched into space?",
+    "options": [
+      "Sputnik 1",
+      "Explorer 1",
+      "Hubble",
+      "Vostok 1"
+    ],
+    "answer": "Sputnik 1",
+    "level": 4,
+    "category": "space"
+  },
+  {
+    "id": "q125",
+    "question": "Who was the first African-American President of the United States?",
+    "options": [
+      "Barack Obama",
+      "George Washington",
+      "Abraham Lincoln",
+      "Thomas Jefferson"
+    ],
+    "answer": "Barack Obama",
+    "level": 5,
+    "category": "politics"
+  },
+  {
+    "id": "q126",
+    "question": "What is the smallest unit of matter?",
+    "options": [
+      "Atom",
+      "Molecule",
+      "Electron",
+      "Proton"
+    ],
+    "answer": "Atom",
+    "level": 6,
+    "category": "science"
+  },
+  {
+    "id": "q127",
+    "question": "Who discovered penicillin?",
+    "options": [
+      "Alexander Fleming",
+      "Louis Pasteur",
+      "Joseph Lister",
+      "Robert Koch"
+    ],
+    "answer": "Alexander Fleming",
+    "level": 7,
+    "category": "science"
+  },
+  {
+    "id": "q128",
+    "question": "Which historical figure is known for the signing of the Magna Carta?",
+    "options": [
+      "King John",
+      "William the Conqueror",
+      "Richard the Lionheart",
+      "Henry VIII"
+    ],
+    "answer": "King John",
+    "level": 8,
+    "category": "history"
+  },
+  {
+    "id": "q129",
+    "question": "Who is known as the father of modern physics?",
+    "options": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Galileo Galilei",
+      "Niels Bohr"
+    ],
+    "answer": "Albert Einstein",
+    "level": 9,
+    "category": "science"
+  },
+  {
+    "id": "q130",
+    "question": "Which mission was the first crewed Moon landing?",
+    "options": [
+      "Apollo 11",
+      "Apollo 12",
+      "Apollo 13",
+      "Apollo 14"
+    ],
+    "answer": "Apollo 11",
+    "level": 10,
+    "category": "space"
+  },
+  {
+    "id": "q131",
+    "question": "What is the nearest star to Earth after the Sun?",
+    "options": [
+      "Proxima Centauri",
+      "Sirius",
+      "Alpha Centauri",
+      "Betelgeuse"
+    ],
+    "answer": "Proxima Centauri",
+    "level": 1,
+    "category": "space"
+  },
+  {
+    "id": "q132",
+    "question": "Which planet is known as the 'Evening Star'?",
+    "options": [
+      "Venus",
+      "Mars",
+      "Jupiter",
+      "Saturn"
+    ],
+    "answer": "Venus",
+    "level": 2,
+    "category": "space"
+  },
+  {
+    "id": "q133",
+    "question": "Which space probe was the first to leave the Solar System?",
+    "options": [
+      "Voyager 1",
+      "Voyager 2",
+      "New Horizons",
+      "Pioneer 10"
+    ],
+    "answer": "Voyager 1",
+    "level": 3,
+    "category": "space"
+  },
+  {
+    "id": "q134",
+    "question": "Which galaxy is closest to the Milky Way?",
+    "options": [
+      "Andromeda",
+      "Triangulum",
+      "Large Magellanic Cloud",
+      "Whirlpool"
+    ],
+    "answer": "Andromeda",
+    "level": 4,
+    "category": "space"
+  },
+  {
+    "id": "q135",
+    "question": "What phenomenon is known as a 'black hole'?",
+    "options": [
+      "An area of space where gravity is so strong that not even light can escape",
+      "A dense star with a strong magnetic field",
+      "A region of space with a high concentration of dark matter",
+      "A rapidly rotating neutron star"
+    ],
+    "answer": "An area of space where gravity is so strong that not even light can escape",
+    "level": 5,
+    "category": "space"
+  },
+  {
+    "id": "q136",
+    "question": "What is the name of the largest volcano in the Solar System?",
+    "options": [
+      "Olympus Mons",
+      "Mauna Kea",
+      "Mount Everest",
+      "Kilauea"
+    ],
+    "answer": "Olympus Mons",
+    "level": 6,
+    "category": "space"
+  },
+  {
+    "id": "q137",
+    "question": "Which spacecraft was the first to land on Mars?",
+    "options": [
+      "Viking 1",
+      "Curiosity",
+      "Opportunity",
+      "Phoenix"
+    ],
+    "answer": "Viking 1",
+    "level": 7,
+    "category": "space"
+  },
+  {
+    "id": "q138",
+    "question": "What is the term for the boundary around a black hole beyond which nothing can escape?",
+    "options": [
+      "Event Horizon",
+      "Schwarzschild Radius",
+      "Singularity",
+      "Photon Sphere"
+    ],
+    "answer": "Event Horizon",
+    "level": 8,
+    "category": "space"
+  },
+  {
+    "id": "q139",
+    "question": "Which planet in our Solar System has the most moons?",
+    "options": [
+      "Saturn",
+      "Jupiter",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn",
+    "level": 9,
+    "category": "space"
+  },
+  {
+    "id": "q140",
+    "question": "What is the name of the first human-made object to reach interstellar space?",
+    "options": [
+      "Voyager 1",
+      "Voyager 2",
+      "New Horizons",
+      "Pioneer 10"
+    ],
+    "answer": "Voyager 1",
+    "level": 10,
+    "category": "space"
+  },
+  {
+    "id": "q141",
+    "question": "Who was the first female Prime Minister of the United Kingdom?",
+    "options": [
+      "Margaret Thatcher",
+      "Theresa May",
+      "Priti Patel",
+      "Elizabeth Truss"
+    ],
+    "answer": "Margaret Thatcher",
+    "level": 1,
+    "category": "politics"
+  },
+  {
+    "id": "q142",
+    "question": "What is the highest legislative body in the United States?",
+    "options": [
+      "Congress",
+      "Supreme Court",
+      "Senate",
+      "House of Representatives"
+    ],
+    "answer": "Congress",
+    "level": 2,
+    "category": "politics"
+  },
+  {
+    "id": "q143",
+    "question": "Which leader is known for the 'New Deal'?",
+    "options": [
+      "Franklin D. Roosevelt",
+      "Theodore Roosevelt",
+      "Abraham Lincoln",
+      "John F. Kennedy"
+    ],
+    "answer": "Franklin D. Roosevelt",
+    "level": 3,
+    "category": "politics"
+  },
+  {
+    "id": "q144",
+    "question": "What document declared the independence of the American colonies?",
+    "options": [
+      "Declaration of Independence",
+      "Constitution",
+      "Bill of Rights",
+      "Federalist Papers"
+    ],
+    "answer": "Declaration of Independence",
+    "level": 4,
+    "category": "politics"
+  },
+  {
+    "id": "q145",
+    "question": "Who was the President of the United States during the Cuban Missile Crisis?",
+    "options": [
+      "John F. Kennedy",
+      "Dwight D. Eisenhower",
+      "Lyndon B. Johnson",
+      "Richard Nixon"
+    ],
+    "answer": "John F. Kennedy",
+    "level": 5,
+    "category": "politics"
+  },
+  {
+    "id": "q146",
+    "question": "Which country was ruled by Genghis Khan?",
+    "options": [
+      "Mongolia",
+      "China",
+      "Russia",
+      "Persia"
+    ],
+    "answer": "Mongolia",
+    "level": 6,
+    "category": "history"
+  },
+  {
+    "id": "q147",
+    "question": "What was the primary purpose of the Berlin Wall?",
+    "options": [
+      "To prevent East Germans from fleeing to West Germany",
+      "To divide Berlin into military zones",
+      "To separate East and West Germany",
+      "To protect against Soviet invasion"
+    ],
+    "answer": "To prevent East Germans from fleeing to West Germany",
+    "level": 7,
+    "category": "history"
+  },
+  {
+    "id": "q148",
+    "question": "Who was the first woman to win a Nobel Prize in Physics?",
+    "options": [
+      "Marie Curie",
+      "Rosalind Franklin",
+      "Ada Lovelace",
+      "Lise Meitner"
+    ],
+    "answer": "Marie Curie",
+    "level": 8,
+    "category": "science"
+  },
+  {
+    "id": "q149",
+    "question": "What year did the French Revolution begin?",
+    "options": [
+      "1789",
+      "1776",
+      "1804",
+      "1815"
+    ],
+    "answer": "1789",
+    "level": 9,
+    "category": "history"
+  },
+  {
+    "id": "q150",
+    "question": "Who was the leader of the Soviet Union during World War II?",
+    "options": [
+      "Joseph Stalin",
+      "Vladimir Lenin",
+      "Leon Trotsky",
+      "Nikita Khrushchev"
+    ],
+    "answer": "Joseph Stalin",
+    "level": 10,
+    "category": "history"
+  },
+  {
+    "id": "q151",
+    "question": "Which planet is known as the 'Giant Red Spot'?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Mars",
+      "Venus"
+    ],
+    "answer": "Jupiter",
+    "level": 1,
+    "category": "science"
+  },
+  {
+    "id": "q152",
+    "question": "What is the primary source of energy for the Earth?",
+    "options": [
+      "Sun",
+      "Wind",
+      "Water",
+      "Geothermal"
+    ],
+    "answer": "Sun",
+    "level": 2,
+    "category": "science"
+  },
+  {
+    "id": "q153",
+    "question": "What is the second most abundant element in the Earth's crust?",
+    "options": [
+      "Silicon",
+      "Aluminum",
+      "Iron",
+      "Calcium"
+    ],
+    "answer": "Silicon",
+    "level": 3,
+    "category": "science"
+  },
+  {
+    "id": "q154",
+    "question": "What is the main function of red blood cells?",
+    "options": [
+      "Transport oxygen",
+      "Fight infection",
+      "Clot blood",
+      "Carry nutrients"
+    ],
+    "answer": "Transport oxygen",
+    "level": 4,
+    "category": "science"
+  },
+  {
+    "id": "q155",
+    "question": "Which branch of science is concerned with the study of heredity?",
+    "options": [
+      "Genetics",
+      "Chemistry",
+      "Physics",
+      "Ecology"
+    ],
+    "answer": "Genetics",
+    "level": 5,
+    "category": "science"
+  },
+  {
+    "id": "q156",
+    "question": "What is the most abundant gas in the Earth's atmosphere?",
+    "options": [
+      "Nitrogen",
+      "Oxygen",
+      "Argon",
+      "Carbon Dioxide"
+    ],
+    "answer": "Nitrogen",
+    "level": 6,
+    "category": "science"
+  },
+  {
+    "id": "q157",
+    "question": "What is the process by which plants make their own food?",
+    "options": [
+      "Photosynthesis",
+      "Respiration",
+      "Fermentation",
+      "Digestion"
+    ],
+    "answer": "Photosynthesis",
+    "level": 7,
+    "category": "science"
+  },
+  {
+    "id": "q158",
+    "question": "Who is known as the father of modern chemistry?",
+    "options": [
+      "Antoine Lavoisier",
+      "Dmitri Mendeleev",
+      "Robert Boyle",
+      "John Dalton"
+    ],
+    "answer": "Antoine Lavoisier",
+    "level": 8,
+    "category": "science"
+  },
+  {
+    "id": "q159",
+    "question": "What is the hardest known natural material on Earth?",
+    "options": [
+      "Diamond",
+      "Graphene",
+      "Boron Nitride",
+      "Wurtzite Boron Nitride"
+    ],
+    "answer": "Diamond",
+    "level": 9,
+    "category": "science"
+  },
+  {
+    "id": "q160",
+    "question": "What is the fundamental unit of life?",
+    "options": [
+      "Cell",
+      "Atom",
+      "Molecule",
+      "Organ"
+    ],
+    "answer": "Cell",
+    "level": 10,
+    "category": "science"
+  },
+  {
+    "id": "q161",
+    "question": "Who was the first emperor of China?",
+    "options": [
+      "Qin Shi Huang",
+      "Han Wudi",
+      "Li Shimin",
+      "Kublai Khan"
+    ],
+    "answer": "Qin Shi Huang",
+    "level": 1,
+    "category": "history"
+  },
+  {
+    "id": "q162",
+    "question": "What was the primary cause of the American Civil War?",
+    "options": [
+      "Slavery",
+      "Economic Differences",
+      "States' Rights",
+      "Territorial Expansion"
+    ],
+    "answer": "Slavery",
+    "level": 2,
+    "category": "history"
+  },
+  {
+    "id": "q163",
+    "question": "Which famous explorer discovered the New World in 1492?",
+    "options": [
+      "Christopher Columbus",
+      "Ferdinand Magellan",
+      "Vasco da Gama",
+      "Hernán Cortés"
+    ],
+    "answer": "Christopher Columbus",
+    "level": 3,
+    "category": "history"
+  },
+  {
+    "id": "q164",
+    "question": "Who was the first woman to fly solo across the Atlantic Ocean?",
+    "options": [
+      "Amelia Earhart",
+      "Bessie Coleman",
+      "Valentina Tereshkova",
+      "Harriet Quimby"
+    ],
+    "answer": "Amelia Earhart",
+    "level": 4,
+    "category": "history"
+  },
+  {
+    "id": "q165",
+    "question": "What empire was ruled by Julius Caesar?",
+    "options": [
+      "Roman Empire",
+      "Ottoman Empire",
+      "Byzantine Empire",
+      "British Empire"
+    ],
+    "answer": "Roman Empire",
+    "level": 5,
+    "category": "history"
+  },
+  {
+    "id": "q166",
+    "question": "Who was the first man to step on the Moon?",
+    "options": [
+      "Neil Armstrong",
+      "Buzz Aldrin",
+      "Yuri Gagarin",
+      "Michael Collins"
+    ],
+    "answer": "Neil Armstrong",
+    "level": 6,
+    "category": "history"
+  },
+  {
+    "id": "q167",
+    "question": "What was the name of the first successful English colony in America?",
+    "options": [
+      "Jamestown",
+      "Plymouth",
+      "Roanoke",
+      "New Amsterdam"
+    ],
+    "answer": "Jamestown",
+    "level": 7,
+    "category": "history"
+  },
+  {
+    "id": "q168",
+    "question": "Which conflict was known as 'The Great War' before World War II?",
+    "options": [
+      "World War I",
+      "World War II",
+      "The Korean War",
+      "The Vietnam War"
+    ],
+    "answer": "World War I",
+    "level": 8,
+    "category": "history"
+  },
+  {
+    "id": "q169",
+    "question": "Who was the longest-reigning monarch of the United Kingdom?",
+    "options": [
+      "Queen Elizabeth II",
+      "Queen Victoria",
+      "King George III",
+      "King Henry VIII"
+    ],
+    "answer": "Queen Elizabeth II",
+    "level": 9,
+    "category": "history"
+  },
+  {
+    "id": "q170",
+    "question": "Which historical figure is known for his 'I Have a Dream' speech?",
+    "options": [
+      "Martin Luther King Jr.",
+      "Malcolm X",
+      "Rosa Parks",
+      "Nelson Mandela"
+    ],
+    "answer": "Martin Luther King Jr.",
+    "level": 10,
+    "category": "history"
+  },
+  {
+    "id": "q171",
+    "question": "What is the largest moon of Saturn?",
+    "options": [
+      "Titan",
+      "Rhea",
+      "Iapetus",
+      "Enceladus"
+    ],
+    "answer": "Titan",
+    "level": 1,
+    "category": "space"
+  },
+  {
+    "id": "q172",
+    "question": "Which planet is known for its ring system?",
+    "options": [
+      "Saturn",
+      "Jupiter",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Saturn",
+    "level": 2,
+    "category": "space"
+  },
+  {
+    "id": "q173",
+    "question": "What is the most massive planet in our Solar System?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Neptune",
+      "Uranus"
+    ],
+    "answer": "Jupiter",
+    "level": 3,
+    "category": "space"
+  },
+  {
+    "id": "q174",
+    "question": "What phenomenon occurs when a star collapses under its own gravity?",
+    "options": [
+      "Supernova",
+      "Neutron Star",
+      "Black Hole",
+      "Pulsar"
+    ],
+    "answer": "Black Hole",
+    "level": 4,
+    "category": "space"
+  },
+  {
+    "id": "q175",
+    "question": "Which mission was the first to land a rover on Mars?",
+    "options": [
+      "Mars Pathfinder",
+      "Viking 1",
+      "Curiosity",
+      "Opportunity"
+    ],
+    "answer": "Mars Pathfinder",
+    "level": 5,
+    "category": "space"
+  },
+  {
+    "id": "q176",
+    "question": "What is the name of the large spiral galaxy closest to the Milky Way?",
+    "options": [
+      "Andromeda",
+      "Triangulum",
+      "Messier 87",
+      "Sombrero Galaxy"
+    ],
+    "answer": "Andromeda",
+    "level": 6,
+    "category": "space"
+  },
+  {
+    "id": "q177",
+    "question": "What is the name of the first human-made object to leave the Solar System?",
+    "options": [
+      "Voyager 1",
+      "Voyager 2",
+      "New Horizons",
+      "Pioneer 10"
+    ],
+    "answer": "Voyager 1",
+    "level": 7,
+    "category": "space"
+  },
+  {
+    "id": "q178",
+    "question": "What is the most distant known galaxy?",
+    "options": [
+      "GN-z11",
+      "Andromeda",
+      "Messier 87",
+      "Hubble Deep Field"
+    ],
+    "answer": "GN-z11",
+    "level": 8,
+    "category": "space"
+  },
+  {
+    "id": "q179",
+    "question": "What is the name of the NASA space telescope launched in 1990?",
+    "options": [
+      "Hubble Space Telescope",
+      "Chandra X-ray Observatory",
+      "James Webb Space Telescope",
+      "Spitzer Space Telescope"
+    ],
+    "answer": "Hubble Space Telescope",
+    "level": 9,
+    "category": "space"
+  },
+  {
+    "id": "q180",
+    "question": "What is the term for a group of stars, planets, and other celestial bodies bound together by gravity?",
+    "options": [
+      "Galaxy",
+      "Cluster",
+      "Solar System",
+      "Nebula"
+    ],
+    "answer": "Galaxy",
+    "level": 10,
+    "category": "space"
+  },
+  {
+    "id": "q181",
+    "question": "Which U.S. President signed the Emancipation Proclamation?",
+    "options": [
+      "Abraham Lincoln",
+      "Andrew Johnson",
+      "Ulysses S. Grant",
+      "Theodore Roosevelt"
+    ],
+    "answer": "Abraham Lincoln",
+    "level": 1,
+    "category": "politics"
+  },
+  {
+    "id": "q182",
+    "question": "Which country is known for its neutral stance in international conflicts?",
+    "options": [
+      "Switzerland",
+      "Sweden",
+      "Norway",
+      "Finland"
+    ],
+    "answer": "Switzerland",
+    "level": 2,
+    "category": "politics"
+  },
+  {
+    "id": "q183",
+    "question": "Which political theory advocates for a classless society?",
+    "options": [
+      "Communism",
+      "Capitalism",
+      "Socialism",
+      "Fascism"
+    ],
+    "answer": "Communism",
+    "level": 3,
+    "category": "politics"
+  },
+  {
+    "id": "q184",
+    "question": "Who was the first President of South Africa elected in a fully representative democratic election?",
+    "options": [
+      "Nelson Mandela",
+      "Desmond Tutu",
+      "Thabo Mbeki",
+      "Jacob Zuma"
+    ],
+    "answer": "Nelson Mandela",
+    "level": 4,
+    "category": "politics"
+  },
+  {
+    "id": "q185",
+    "question": "What is the highest office in the European Union?",
+    "options": [
+      "President of the European Commission",
+      "President of the European Council",
+      "European Parliament Speaker",
+      "High Representative for Foreign Affairs"
+    ],
+    "answer": "President of the European Commission",
+    "level": 5,
+    "category": "politics"
+  },
+  {
+    "id": "q186",
+    "question": "Which event marked the beginning of the French Revolution?",
+    "options": [
+      "Storming of the Bastille",
+      "Execution of Louis XVI",
+      "Reign of Terror",
+      "Fall of the Monarchy"
+    ],
+    "answer": "Storming of the Bastille",
+    "level": 6,
+    "category": "history"
+  },
+  {
+    "id": "q187",
+    "question": "What was the main goal of the Marshall Plan?",
+    "options": [
+      "Rebuild European economies after World War II",
+      "Establish NATO",
+      "Expand American influence in Asia",
+      "Support the League of Nations"
+    ],
+    "answer": "Rebuild European economies after World War II",
+    "level": 7,
+    "category": "history"
+  },
+  {
+    "id": "q188",
+    "question": "Who was the famous queen of ancient Egypt known for her relationships with Julius Caesar and Mark Antony?",
+    "options": [
+      "Cleopatra",
+      "Nefertiti",
+      "Hatshepsut",
+      "Amunet"
+    ],
+    "answer": "Cleopatra",
+    "level": 8,
+    "category": "history"
+  },
+  {
+    "id": "q189",
+    "question": "What was the primary cause of the Cold War?",
+    "options": [
+      "Ideological conflict between capitalism and communism",
+      "Territorial disputes",
+      "Economic competition",
+      "Military aggression"
+    ],
+    "answer": "Ideological conflict between capitalism and communism",
+    "level": 9,
+    "category": "history"
+  },
+  {
+    "id": "q190",
+    "question": "Which empire was the precursor to modern-day Turkey?",
+    "options": [
+      "Ottoman Empire",
+      "Roman Empire",
+      "Byzantine Empire",
+      "Seljuk Empire"
+    ],
+    "answer": "Ottoman Empire",
+    "level": 10,
+    "category": "history"
+  },
+  {
+    "id": "q191",
+    "question": "Which element is represented by the symbol 'Hg'?",
+    "options": [
+      "Mercury",
+      "Hydrogen",
+      "Gold",
+      "Manganese"
+    ],
+    "answer": "Mercury",
+    "level": 1,
+    "category": "science"
+  },
+  {
+    "id": "q192",
+    "question": "What is the primary function of mitochondria in cells?",
+    "options": [
+      "Generate energy",
+      "Store genetic information",
+      "Synthesize proteins",
+      "Transport materials"
+    ],
+    "answer": "Generate energy",
+    "level": 2,
+    "category": "science"
+  },
+  {
+    "id": "q193",
+    "question": "What is the most abundant protein in the human body?",
+    "options": [
+      "Collagen",
+      "Keratin",
+      "Actin",
+      "Myosin"
+    ],
+    "answer": "Collagen",
+    "level": 3,
+    "category": "science"
+  },
+  {
+    "id": "q194",
+    "question": "What is the primary cause of genetic variation?",
+    "options": [
+      "Mutations",
+      "Genetic Drift",
+      "Gene Flow",
+      "Natural Selection"
+    ],
+    "answer": "Mutations",
+    "level": 4,
+    "category": "science"
+  },
+  {
+    "id": "q195",
+    "question": "Which organ in the human body is primarily responsible for detoxification?",
+    "options": [
+      "Liver",
+      "Kidney",
+      "Heart",
+      "Lung"
+    ],
+    "answer": "Liver",
+    "level": 5,
+    "category": "science"
+  },
+  {
+    "id": "q196",
+    "question": "What is the standard unit of electrical resistance?",
+    "options": [
+      "Ohm",
+      "Volt",
+      "Ampere",
+      "Watt"
+    ],
+    "answer": "Ohm",
+    "level": 6,
+    "category": "science"
+  },
+  {
+    "id": "q197",
+    "question": "Which theory explains the origin of the universe?",
+    "options": [
+      "Big Bang Theory",
+      "Theory of Relativity",
+      "Quantum Mechanics",
+      "String Theory"
+    ],
+    "answer": "Big Bang Theory",
+    "level": 7,
+    "category": "science"
+  },
+  {
+    "id": "q198",
+    "question": "Who is known for the theory of evolution by natural selection?",
+    "options": [
+      "Charles Darwin",
+      "Gregor Mendel",
+      "Louis Pasteur",
+      "James Watson"
+    ],
+    "answer": "Charles Darwin",
+    "level": 8,
+    "category": "science"
+  },
+  {
+    "id": "q199",
+    "question": "What is the process by which a liquid turns into a gas?",
+    "options": [
+      "Evaporation",
+      "Condensation",
+      "Sublimation",
+      "Deposition"
+    ],
+    "answer": "Evaporation",
+    "level": 9,
+    "category": "science"
+  },
+  {
+    "id": "q200",
+    "question": "What is the name of the force that attracts objects towards the center of the Earth?",
+    "options": [
+      "Gravity",
+      "Electromagnetism",
+      "Nuclear Force",
+      "Friction"
+    ],
+    "answer": "Gravity",
+    "level": 10,
+    "category": "science"
+  },
+  {
+    "id": "q201",
+    "question": "Which planet is known for its Great Red Spot?",
+    "options": [
+      "Jupiter",
+      "Mars",
+      "Saturn",
+      "Neptune"
+    ],
+    "answer": "Jupiter",
+    "level": 1,
+    "category": "space"
+  },
+  {
+    "id": "q202",
+    "question": "What is the name of the boundary surrounding a black hole beyond which nothing can escape?",
+    "options": [
+      "Event Horizon",
+      "Singularity",
+      "Photon Sphere",
+      "Accretion Disk"
+    ],
+    "answer": "Event Horizon",
+    "level": 2,
+    "category": "space"
+  },
+  {
+    "id": "q203",
+    "question": "What is the term for a star that has exploded at the end of its life cycle?",
+    "options": [
+      "Supernova",
+      "Nova",
+      "Pulsar",
+      "Quasar"
+    ],
+    "answer": "Supernova",
+    "level": 3,
+    "category": "space"
+  },
+  {
+    "id": "q204",
+    "question": "What is the largest planet in our Solar System?",
+    "options": [
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune"
+    ],
+    "answer": "Jupiter",
+    "level": 4,
+    "category": "space"
+  },
+  {
+    "id": "q205",
+    "question": "Which space probe was the first to fly past Pluto?",
+    "options": [
+      "New Horizons",
+      "Voyager 1",
+      "Voyager 2",
+      "Pioneer 10"
+    ],
+    "answer": "New Horizons",
+    "level": 5,
+    "category": "space"
+  },
+  {
+    "id": "q206",
+    "question": "What is the most distant known galaxy from Earth?",
+    "options": [
+      "GN-z11",
+      "Andromeda",
+      "Messier 87",
+      "Hubble Deep Field"
+    ],
+    "answer": "GN-z11",
+    "level": 6,
+    "category": "space"
+  },
+  {
+    "id": "q207",
+    "question": "Which planet has the highest mountain in the Solar System?",
+    "options": [
+      "Mars",
+      "Earth",
+      "Venus",
+      "Saturn"
+    ],
+    "answer": "Mars",
+    "level": 7,
+    "category": "space"
+  },
+  {
+    "id": "q208",
+    "question": "What is the name of the boundary that defines the edge of our Solar System?",
+    "options": [
+      "Heliosphere",
+      "Oort Cloud",
+      "Kuiper Belt",
+      "Asteroid Belt"
+    ],
+    "answer": "Heliosphere",
+    "level": 8,
+    "category": "space"
+  },
+  {
+    "id": "q209",
+    "question": "What type of star is the Sun classified as?",
+    "options": [
+      "G-Type Main Sequence",
+      "Red Giant",
+      "White Dwarf",
+      "Neutron Star"
+    ],
+    "answer": "G-Type Main Sequence",
+    "level": 9,
+    "category": "space"
+  },
+  {
+    "id": "q210",
+    "question": "What is the term for the phenomenon where light bends around a massive object in space?",
+    "options": [
+      "Gravitational Lensing",
+      "Redshift",
+      "Blueshift",
+      "Cosmic Microwave Background"
+    ],
+    "answer": "Gravitational Lensing",
+    "level": 10,
+    "category": "space"
+  }
+]

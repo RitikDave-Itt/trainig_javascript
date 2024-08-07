@@ -100,7 +100,7 @@ window.localStorage.removeItem = removeItem;
 
 
 const formTodo = document.querySelector(".form-todo");
-const taskList = document.querySelector(".task-list");
+let taskList = document.querySelector(".task-list");
 // const taskCard = document.querySelector(".task");
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -109,11 +109,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
   let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
+  // console.log(taskList)
 
-  localStorageTodo?.map((task) => {
+  localStorageTodo.forEach((task) => {
     taskList.appendChild(createTaskCard(task));
-  });
 });
+});
+ taskList = document.querySelector(".task-list");
+
 
 formTodo.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -295,6 +298,9 @@ function sortTaskElementsByRemainingTime(taskElements) {
 }
 
 remainingTimeHeader.addEventListener("click", () => {
+  let taskList = document.querySelector(".task-list");
+
+
   const taskElements = taskList.children;
   const sortedTasks = sortTaskElementsByRemainingTime(taskElements);
   taskList.innerHTML = ''; 

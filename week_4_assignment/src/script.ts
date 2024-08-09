@@ -127,7 +127,7 @@ let levelQuestionsList: Question[] = [];
 
 let currentLevel = 1;
 let selectedQuestion: Question | undefined;
-let amount :any = "40000";
+let amount :string = "0";
 let timerInterval: number | undefined;
 let gameOver = false;
 let gameon = false;
@@ -315,6 +315,8 @@ function stopTimer(): void {
 }
 
 function correctAnswer(): void {
+amount = document.getElementById(`l${currentLevel}`)?.textContent!;
+
    
   playAudioWithPause("correctAnswer.mp3");
   displayBox.classList.remove("hide");
@@ -326,7 +328,6 @@ function correctAnswer(): void {
   //   console.log(document.getElementById(`l${currentLevel}`)?.textContent);
   
   currentLevel++;
-  amount = document.getElementById(`l${currentLevel}`)?.textContent;
   resetQuestionAndOptions();
   if(currentLevel==11){
     displayBox.querySelector(".title")!.textContent = "YOU WON !";

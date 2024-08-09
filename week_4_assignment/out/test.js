@@ -10,7 +10,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 // ##########################################################################
 // dynamic html Generate
 // ##########################################################################
-console.log("helloWorldHardik");
 const levels = document.querySelector(".levels");
 const level = document.querySelector(".level");
 levels.removeChild(level);

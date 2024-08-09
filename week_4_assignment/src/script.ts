@@ -22,7 +22,7 @@ function createLevels(): void {
 // logic
 // #######################################################################
 document.addEventListener('contextmenu', event => event.preventDefault());
-const turnUpVolume = document.querySelector(".turn-up-volume");
+const turnUpVolume = document.querySelector(".turn-up-volume")as HTMLElement;
 
 interface Question {
   category: string;
@@ -48,10 +48,12 @@ const soundEffects: string[] = [
 const audioDirectory = "soundEffects/";
 let audioFiles: Record<string, HTMLAudioElement> = {};
 
+let turnUpVolumeAnimation :any;
+
 document.addEventListener("DOMContentLoaded", async () => {
-    setTimeout(()=>{
-        turnUpVolume.classList.add("hide");
-    },2000);
+    turnUpVolumeAnimation=setInterval(()=>{
+        turnUpVolume.classList.toggle("hide");
+    },500);
 
   try {
     await loadAudioFiles();
@@ -130,7 +132,9 @@ function filterLevelQuestions(): void {
 }
 
 start.addEventListener("click", () => {
-  if (!selectedCategory) {
+    clearInterval(turnUpVolumeAnimation);
+    turnUpVolume.classList.add("hide");
+    if (!selectedCategory) {
     return;
   }
   categoryQuestions = (questions || []).filter(
@@ -280,11 +284,14 @@ function startTimer(duration: number): number {
   timerInterval = setInterval(() => {
     const seconds = parseInt(timer.toString(), 10);
     timerDisplay.textContent = seconds.toString();
-
+    if(timer<10){
+        timerDisplay.classList.add("low-time");
+    }
     if (--timer < 0) {
       clearInterval(timerInterval);
       timeOut();
     }
+    
   }, 1000);
 
   return timerInterval;

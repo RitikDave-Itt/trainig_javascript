@@ -22,6 +22,7 @@ function createLevels(): void {
 // logic
 // #######################################################################
 document.addEventListener('contextmenu', event => event.preventDefault());
+const turnUpVolume = document.querySelector(".turn-up-volume");
 
 interface Question {
   category: string;
@@ -48,6 +49,10 @@ const audioDirectory = "soundEffects/";
 let audioFiles: Record<string, HTMLAudioElement> = {};
 
 document.addEventListener("DOMContentLoaded", async () => {
+    setTimeout(()=>{
+        turnUpVolume.classList.add("hide");
+    },2000);
+
   try {
     await loadAudioFiles();
   } catch (error) {

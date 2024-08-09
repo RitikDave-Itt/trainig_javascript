@@ -10,6 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 // ##########################################################################
 // dynamic html Generate
 // ##########################################################################
+console.log("helloWorldHardik");
 const levels = document.querySelector(".levels");
 const level = document.querySelector(".level");
 levels.removeChild(level);
@@ -27,6 +28,7 @@ function createLevels() {
 // logic
 // #######################################################################
 document.addEventListener('contextmenu', event => event.preventDefault());
+const turnUpVolume = document.querySelector(".turn-up-volume");
 let questions = null;
 let currentAudio = null;
 const soundEffects = [
@@ -42,6 +44,9 @@ const soundEffects = [
 const audioDirectory = "soundEffects/";
 let audioFiles = {};
 document.addEventListener("DOMContentLoaded", () => __awaiter(this, void 0, void 0, function* () {
+    setTimeout(() => {
+        turnUpVolume.classList.add("hide");
+    }, 2000);
     try {
         yield loadAudioFiles();
     }

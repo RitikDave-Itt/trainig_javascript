@@ -55,6 +55,7 @@ function createLevels() {
 // logic
 // #######################################################################
 document.addEventListener('contextmenu', function (event) { return event.preventDefault(); });
+var turnUpVolume = document.querySelector(".turn-up-volume");
 var questions = null;
 var currentAudio = null;
 var soundEffects = [
@@ -74,43 +75,48 @@ document.addEventListener("DOMContentLoaded", function () { return __awaiter(_th
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                _a.trys.push([0, 2, , 3]);
-                return [4 /*yield*/, loadAudioFiles()];
+                setTimeout(function () {
+                    turnUpVolume.classList.add("hide");
+                }, 2000);
+                _a.label = 1;
             case 1:
-                _a.sent();
-                return [3 /*break*/, 3];
+                _a.trys.push([1, 3, , 4]);
+                return [4 /*yield*/, loadAudioFiles()];
             case 2:
+                _a.sent();
+                return [3 /*break*/, 4];
+            case 3:
                 error_1 = _a.sent();
                 console.error("Error loading audio files:", error_1);
-                return [3 /*break*/, 3];
-            case 3:
+                return [3 /*break*/, 4];
+            case 4:
                 playAudioWithPause("intro2.mp3");
                 createLevels();
                 storedQuestions = window.localStorage.getItem("questions");
-                if (!!storedQuestions) return [3 /*break*/, 9];
-                _a.label = 4;
-            case 4:
-                _a.trys.push([4, 7, , 8]);
-                return [4 /*yield*/, fetch("questions.json")];
+                if (!!storedQuestions) return [3 /*break*/, 10];
+                _a.label = 5;
             case 5:
+                _a.trys.push([5, 8, , 9]);
+                return [4 /*yield*/, fetch("questions.json")];
+            case 6:
                 response = _a.sent();
                 if (!response.ok) {
                     throw new Error("unable to fetch questions.json");
                 }
                 return [4 /*yield*/, response.json()];
-            case 6:
+            case 7:
                 questions = (_a.sent());
                 window.localStorage.setItem("questions", JSON.stringify(questions));
-                return [3 /*break*/, 8];
-            case 7:
+                return [3 /*break*/, 9];
+            case 8:
                 error_2 = _a.sent();
                 console.log(error_2);
-                return [3 /*break*/, 8];
-            case 8: return [3 /*break*/, 10];
-            case 9:
+                return [3 /*break*/, 9];
+            case 9: return [3 /*break*/, 11];
+            case 10:
                 questions = JSON.parse(storedQuestions);
-                _a.label = 10;
-            case 10: return [2 /*return*/];
+                _a.label = 11;
+            case 11: return [2 /*return*/];
         }
     });
 }); });

@@ -1,17 +1,18 @@
 // ##########################################################################
 // dynamic html Generate
 // ##########################################################################
-const levels = document.querySelector(".levels");
-const level = document.querySelector(".level");
+const levels = document.querySelector(".levels") as HTMLElement;
+const level = document.querySelector(".level") as HTMLElement;
 levels.removeChild(level);
 
-function createLevels() {
+function createLevels(): void {
   let baseMoney = 10000;
 
   for (let i = 1; i < 11; i++) {
-    let newLevel = level.cloneNode(true);
-    newLevel.querySelector(".amount").textContent = baseMoney * i;
-    newLevel.querySelector(".amount").id = `l${i}`;
+    let newLevel = level.cloneNode(true) as HTMLElement;
+    const amountElement = newLevel.querySelector(".amount") as HTMLElement;
+    amountElement.textContent = (baseMoney * i).toString();
+    amountElement.id = `l${i}`;
 
     levels.insertBefore(newLevel, levels.firstChild);
   }
@@ -22,9 +23,18 @@ function createLevels() {
 // #######################################################################
 document.addEventListener('contextmenu', event => event.preventDefault());
 
-let questions;
-let currentAudio = null;
-const soundEffects = [
+interface Question {
+  category: string;
+  level: number;
+  question: string;
+  options: string[];
+  answer: string;
+}
+
+let questions: Question[] | null = null;
+let currentAudio: HTMLAudioElement | null = null;
+
+const soundEffects: string[] = [
   "suspence.mp3",
   "30secTimer.mp3",
   "intro1.mp3",
@@ -35,7 +45,8 @@ const soundEffects = [
   "correctAnswer.mp3",
 ];
 const audioDirectory = "soundEffects/";
-let audioFiles = {};
+let audioFiles: Record<string, HTMLAudioElement> = {};
+
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     await loadAudioFiles();
@@ -44,40 +55,40 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   playAudioWithPause("intro2.mp3");
-
   createLevels();
-  questions = window.localStorage.getItem("questions");
-  if (!questions) {
+
+  const storedQuestions = window.localStorage.getItem("questions");
+  if (!storedQuestions) {
     try {
-      const Response = await fetch("questions.json");
-      if (!Response.ok) {
-        throw new Error("unable to fetch Questions.json");
+      const response = await fetch("questions.json");
+      if (!response.ok) {
+        throw new Error("unable to fetch questions.json");
       }
 
-      questions = await Response.json();
+      questions = await response.json() as Question[];
       window.localStorage.setItem("questions", JSON.stringify(questions));
     } catch (error) {
       console.log(error);
     }
   } else {
-    questions = JSON.parse(questions);
+    questions = JSON.parse(storedQuestions) as Question[];
   }
 });
 
-const divFlipQuestion = document.getElementById("flip");
-const questionBox = document.querySelector(".question-box") ;
+const divFlipQuestion = document.getElementById("flip") as HTMLElement;
+const questionBox = document.querySelector(".question-box") as HTMLElement;
 
-const divFiftyFifty = document.getElementById("50-50");
+const divFiftyFifty = document.getElementById("50-50") as HTMLElement;
 let categoryButtons = document.querySelectorAll(".category");
-const categoryContainer = document.querySelector(".category-container");
-const start = document.querySelector(".start-game");
-const displayBox = document.querySelector(".display-box");
-const okButton = document.querySelector(".ok-button");
-const blockMouseEvents = document.querySelector(".block-mouse-actions");
-const questionText = document.querySelector(".question-text");
-const timerDisplay = document.querySelector(".timer");
+const categoryContainer = document.querySelector(".category-container") as HTMLElement;
+const start = document.querySelector(".start-game") as HTMLElement;
+const displayBox = document.querySelector(".display-box") as HTMLElement;
+const okButton = document.querySelector(".ok-button") as HTMLElement;
+const blockMouseEvents = document.querySelector(".block-mouse-actions") as HTMLElement;
+const questionText = document.querySelector(".question-text") as HTMLElement;
+const timerDisplay = document.querySelector(".timer") as HTMLElement;
 
-let selectedcategory;
+let selectedCategory: string | undefined;
 
 categoryButtons.forEach((category) => {
   category.addEventListener("click", () => {
@@ -85,40 +96,40 @@ categoryButtons.forEach((category) => {
       cat.classList.remove("active-category");
     });
 
-    selectedcategory = category.textContent.trim();
+    selectedCategory = category.textContent?.trim();
     category.classList.add("active-category");
   });
 });
 
 const options = document.querySelectorAll(".option");
-let optionsArray = Array.from(options);
+let optionsArray = Array.from(options) as HTMLElement[];
 
-let categoryQuestions = [];
-let levelQuestionsList = [];
+let categoryQuestions: Question[] = [];
+let levelQuestionsList: Question[] = [];
 
-let currentLevel = 9;
-let selectedQuestion = "";
+let currentLevel = 1;
+let selectedQuestion: Question | undefined;
 let amount = 10000;
-let timerInterval;
+let timerInterval: number | undefined;
 let gameOver = false;
 let gameon = false;
 let usedFiftyFifty = false;
 let usedFlip = false;
-let rightOption;
-let currentLevelDiv;
+let rightOption: HTMLElement | undefined;
+let currentLevelDiv: HTMLElement | null = null;
 
-function filterLevelQuestions() {
+function filterLevelQuestions(): void {
   levelQuestionsList = categoryQuestions.filter(
     (question) => question.level === currentLevel
   );
 }
 
 start.addEventListener("click", () => {
-  if (!selectedcategory) {
+  if (!selectedCategory) {
     return;
   }
-  categoryQuestions = questions.filter(
-    (question) => question.category === selectedcategory
+  categoryQuestions = (questions || []).filter(
+    (question) => question.category === selectedCategory
   );
   categoryContainer.classList.add("hide");
   displayBox.classList.remove("hide");
@@ -126,7 +137,7 @@ start.addEventListener("click", () => {
 });
 
 okButton.addEventListener("click", () => {
-    currentLevelDiv = document.getElementById(`l${currentLevel}`);
+  currentLevelDiv = document.getElementById(`l${currentLevel}`);
 
   if (gameOver) {
     window.location.reload();
@@ -146,21 +157,19 @@ okButton.addEventListener("click", () => {
     }
 
     getCurrentLevelQuestion();
-    insertQuestion(selectedQuestion);
-    timer = startTimer(30);
+    insertQuestion();
+    timerInterval = startTimer(30);
     blockMouseEvents.classList.add("hide");
     getRightOption();
     console.log(rightOption);
   }, 4 * 1000);
 
-  currentLevelDiv.classList.add("selected-option");
+  currentLevelDiv?.classList.add("selected-option");
   displayBox.classList.add("hide");
   playAudioWithPause("questionLoad.mp3");
 });
 
-// let divFiftyFiftyClicked = false;
-
-function getCurrentLevelQuestion() {
+function getCurrentLevelQuestion(): void {
   gameon = true;
 
   filterLevelQuestions();
@@ -169,61 +178,61 @@ function getCurrentLevelQuestion() {
   selectedQuestion = levelQuestionsList[randomIndex];
 }
 
-function getRightOption(){
-    optionsArray.forEach((option)=>{
-        if(option.querySelector(".option-value").textContent==selectedQuestion.answer){
-            rightOption = option;
-
-        }
-    })
+function getRightOption(): void {
+  optionsArray.forEach((option) => {
+    const optionValue = option.querySelector(".option-value")?.textContent;
+    if (optionValue === selectedQuestion?.answer) {
+      rightOption = option;
+    }
+  });
 }
 
 options.forEach((option) => {
-
   option.addEventListener("click", () => {
     playAudioWithPause("optionSelected.mp3");
 
     option.classList.add("flicker-option");
     blockMouseEvents.classList.remove("hide");
     stopTimer();
-    
+
     setTimeout(() => {
       option.classList.remove("flicker-option");
-      rightOption.classList.add("correct-answer");
+      rightOption?.classList.add("correct-answer");
 
-      const optionValue = option.querySelector(".option-value").textContent;
-      if (optionValue == selectedQuestion.answer) {
+      const optionValue = option.querySelector(".option-value")?.textContent;
+      if (optionValue === selectedQuestion?.answer) {
+        currentLevelDiv?.classList.remove("selected-option");
+        currentLevelDiv?.classList.add("correct-answer");
+        option.classList.add("correct-answer");
 
-        currentLevelDiv.classList.remove("selected-option");
-
-        currentLevelDiv.classList.add("correct-answer");
-        option.classList.add('correct-answer')
-        
-        setTimeout(()=>{correctAnswer()},1000);
+        setTimeout(() => {
+          correctAnswer();
+        }, 1000);
       } else {
-        currentLevelDiv.classList.remove("selected-option");
-
-        currentLevelDiv.classList.add("wrong-answer");
+        currentLevelDiv?.classList.remove("selected-option");
+        currentLevelDiv?.classList.add("wrong-answer");
         option.classList.add("wrong-answer");
 
-        setTimeout(()=>{wrongAnswer()},1000);
+        setTimeout(() => {
+          wrongAnswer();
+        }, 1000);
       }
-      if (currentLevel == 11) {
+
+      if (currentLevel === 11) {
         gameOver = true;
       }
     }, 4000);
   });
 });
 
-
-
-function resetQuestionAndOptions() {
+function resetQuestionAndOptions(): void {
   optionsArray.forEach((option) => {
     option.classList.remove("correct-answer");
     option.classList.remove("wrong-answer");
     option.classList.remove("selected-option");
     blockMouseEvents.classList.add("hide");
-    option.querySelector(".option-value").textContent = "";
+    const optionValue = option.querySelector(".option-value") as HTMLElement;
+    optionValue.textContent = "";
     option.classList.remove("hide");
   });
   questionText.textContent = "";
@@ -231,20 +240,18 @@ function resetQuestionAndOptions() {
   gameon = false;
 }
 
-function insertQuestion() {
-  document.querySelector(".question-text").textContent =
-    selectedQuestion.question;
-  let a = document.getElementById("a");
-  let b = document.getElementById("b");
-
-  let c = document.getElementById("c");
-  let d = document.getElementById("d");
+function insertQuestion(): void {
+  questionText.textContent = selectedQuestion?.question || "";
+  const a = document.getElementById("a") as HTMLElement;
+  const b = document.getElementById("b") as HTMLElement;
+  const c = document.getElementById("c") as HTMLElement;
+  const d = document.getElementById("d") as HTMLElement;
 
   let elements = [a, b, c, d];
 
-  let shuffledOptions = shuffleArray(selectedQuestion.options.slice());
+  const shuffledOptions = shuffleArray(selectedQuestion?.options.slice() || []);
 
-  let shuffledElements = shuffleArray(elements.slice());
+  const shuffledElements = shuffleArray(elements.slice());
 
   shuffledElements.forEach((element, index) => {
     if (element) {
@@ -252,7 +259,8 @@ function insertQuestion() {
     }
   });
 }
-function shuffleArray(arr) {
+
+function shuffleArray<T>(arr: T[]): T[] {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
@@ -260,14 +268,13 @@ function shuffleArray(arr) {
   return arr;
 }
 
-function startTimer(duration) {
+function startTimer(duration: number): number {
   playAudioWithPause("30secTimer.mp3");
 
-  let timer = duration,
-    seconds;
+  let timer = duration;
   timerInterval = setInterval(() => {
-    seconds = parseInt(timer, 10);
-    timerDisplay.textContent = seconds;
+    const seconds = parseInt(timer.toString(), 10);
+    timerDisplay.textContent = seconds.toString();
 
     if (--timer < 0) {
       clearInterval(timerInterval);
@@ -278,68 +285,55 @@ function startTimer(duration) {
   return timerInterval;
 }
 
-function stopTimer() {
+function stopTimer(): void {
   clearInterval(timerInterval);
 }
 
-function correctAnswer() {
+function correctAnswer(): void {
   playAudioWithPause("correctAnswer.mp3");
   displayBox.classList.remove("hide");
   displayBox.classList.add("correct-answer-div-shadow");
 
-  displayBox.querySelector(".title").textContent = "CORRECT ANSWER !";
-  displayBox.querySelector(".messege").textContent = `Score ${amount}`;
-  displayBox.querySelector(".ok-button").textContent = "Next Question";
+  displayBox.querySelector(".title")!.textContent = "CORRECT ANSWER !";
+  displayBox.querySelector(".messege")!.textContent = `Score ${amount}`;
+  displayBox.querySelector(".ok-button")!.textContent = "Next Question";
 
   currentLevel++;
   amount += 10000;
   resetQuestionAndOptions();
-
 }
-function wrongAnswer() {
+
+function wrongAnswer(): void {
   playAudioWithPause("wrongAnswer.mp3");
   displayBox.classList.remove("hide");
   displayBox.classList.add("wrong-answer-div-shadow");
 
-  displayBox.querySelector(".title").textContent = "WRONG ANSWER !";
-  displayBox.querySelector(".messege").textContent = `Score ${amount - 10000}`;
-  displayBox.querySelector(".ok-button").textContent = "Restart Game";
+  displayBox.querySelector(".title")!.textContent = "WRONG ANSWER !";
+  displayBox.querySelector(".messege")!.textContent = `Score ${amount - 10000}`;
+  displayBox.querySelector(".ok-button")!.textContent = "Restart Game";
 
   gameOver = true;
   resetQuestionAndOptions();
-
 }
-function timeOut() {
+
+function timeOut(): void {
   playAudioWithPause("wrongAnswer.mp3");
 
   displayBox.classList.remove("hide");
   displayBox.classList.add("wrong-answer-div-shadow");
 
-  displayBox.querySelector(".title").textContent = "TIME OUT";
-  displayBox.querySelector(".messege").textContent = `Score ${amount - 10000}`;
-  displayBox.querySelector(".ok-button").textContent = "Restart Game";
+  displayBox.querySelector(".title")!.textContent = "TIME OUT";
+  displayBox.querySelector(".messege")!.textContent = `Score ${amount - 10000}`;
+  displayBox.querySelector(".ok-button")!.textContent = "Restart Game";
   gameOver = true;
-}
-function wonGame(){
-    playAudioWithPause("correctAnswer.mp3");
-    displayBox.classList.remove("hide");
-    displayBox.classList.add("correct-answer-div-shadow");
-  
-    displayBox.querySelector(".title").textContent = "You Won!";
-    displayBox.querySelector(".messege").textContent = `Score ${amount}`;
-    displayBox.querySelector(".ok-button").textContent = "Exit";
-  
-    resetQuestionAndOptions();
-
-    
 }
 
 // ########################################################################
 // audio code
 // ########################################################################
 
-async function loadAudioFiles() {
-  return Promise.all(
+async function loadAudioFiles(): Promise<void> {
+  await Promise.all(
     soundEffects.map(async (filename) => {
       const audioPath = audioDirectory + filename;
       const storedAudio = localStorage.getItem(filename);
@@ -357,16 +351,16 @@ async function loadAudioFiles() {
   );
 }
 
-function convertBlobToBase64(blob) {
+function convertBlobToBase64(blob: Blob): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
-    reader.onloadend = () => resolve(reader.result.split(",")[1]);
+    reader.onloadend = () => resolve((reader.result as string).split(",")[1]);
     reader.onerror = reject;
     reader.readAsDataURL(blob);
   });
 }
 
-function playAudioWithPause(filename) {
+function playAudioWithPause(filename: string): void {
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
@@ -375,31 +369,26 @@ function playAudioWithPause(filename) {
   currentAudio.play();
 }
 
-function stopAudio() {
+function stopAudio(): void {
   if (currentAudio) {
     currentAudio.pause();
     currentAudio.currentTime = 0;
   }
 }
-function playAudioWithoutPause(filename) {
-  let newAudio = audioFiles[filename];
+
+function playAudioWithoutPause(filename: string): void {
+  const newAudio = audioFiles[filename];
   newAudio.play();
 }
 
-function lifelineFiftyFifty() {
+function lifelineFiftyFifty(): void {
   divFiftyFifty.addEventListener("click", () => {
     divFiftyFifty.classList.add("used-lifeline");
     playAudioWithoutPause("suspence.mp3");
 
-    // divFiftyFifty.style.
-
     const wrongOptions = optionsArray.filter((option) => {
-      if (
-        option.querySelector(".option-value").textContent !=
-        selectedQuestion.answer
-      ) {
-        return option;
-      }
+      const optionValue = option.querySelector(".option-value")?.textContent;
+      return optionValue !== selectedQuestion?.answer;
     });
 
     let randomIndex = Math.floor(Math.random() * 3);
@@ -410,17 +399,17 @@ function lifelineFiftyFifty() {
 
     wrongOptions[randomIndex].classList.add("hide");
 
-    wrongOptions.pop(randomIndex);
+    wrongOptions.pop();
   });
 }
 
-function lifelineFlipQuestion() {
+function lifelineFlipQuestion(): void {
   divFlipQuestion.addEventListener("click", () => {
     divFlipQuestion.classList.add("used-lifeline");
     playAudioWithoutPause("suspence.mp3");
     resetQuestionAndOptions();
 
-    let newQuestion;
+    let newQuestion: Question;
     do {
       const randomIndex = Math.floor(Math.random() * levelQuestionsList.length);
       newQuestion = levelQuestionsList[randomIndex];
@@ -428,29 +417,24 @@ function lifelineFlipQuestion() {
 
     selectedQuestion = newQuestion;
 
-    insertQuestion(selectedQuestion);
+    insertQuestion();
   });
 }
 
+function startFlickerAll(): void {
+  optionsArray.forEach((option) => {
+    option.classList.add("flicker-all");
+  });
 
-function startFlickerAll(){
-    optionsArray.forEach((option)=>{
-        option.classList.add("flicker-all");
-    })
-
-    questionText.classList.add("flicker-all");
-    timerDisplay.classList.add("flicker-all");
-    
-
+  questionText.classList.add("flicker-all");
+  timerDisplay.classList.add("flicker-all");
 }
 
-function stopFlickerAll(){
-    optionsArray.forEach((option)=>{
-        option.classList.remove("flicker-all");
-    })
+function stopFlickerAll(): void {
+  optionsArray.forEach((option) => {
+    option.classList.remove("flicker-all");
+  });
 
-    questionText.classList.remove("flicker-all");
-    timerDisplay.classList.remove("flicker-all");
-    
-
+  questionText.classList.remove("flicker-all");
+  timerDisplay.classList.remove("flicker-all");
 }

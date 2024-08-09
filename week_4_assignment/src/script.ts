@@ -297,7 +297,7 @@ function startTimer(duration: number): number {
   timerInterval = setInterval(() => {
     const seconds = parseInt(timer.toString(), 10);
     timerDisplay.textContent = seconds.toString();
-    if(timer<10){
+    if(timer==10){
         timerDisplay.classList.add("low-time");
     }
     if (--timer < 0) {
@@ -311,6 +311,8 @@ function startTimer(duration: number): number {
 }
 
 function stopTimer(): void {
+  timerDisplay.classList.remove("low-time");
+
   clearInterval(timerInterval);
 }
 

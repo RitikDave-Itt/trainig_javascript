@@ -6,13 +6,23 @@ const level = document.querySelector(".level") as HTMLElement;
 levels.removeChild(level);
 
 function createLevels(): void {
-  let baseMoney = 10000;
+  let baseMoney = 40000;
 
   for (let i = 1; i < 11; i++) {
     let newLevel = level.cloneNode(true) as HTMLElement;
     const amountElement = newLevel.querySelector(".amount") as HTMLElement;
-    amountElement.textContent = (baseMoney * i).toString();
+    amountElement.textContent = (baseMoney).toString();
     amountElement.id = `l${i}`;
+    baseMoney = baseMoney*2;
+
+    if(i==5){
+        baseMoney-=30000;
+
+    }
+    if(i==9){
+        baseMoney = 70000000
+
+    }
 
     levels.insertBefore(newLevel, levels.firstChild);
   }
@@ -22,7 +32,7 @@ function createLevels(): void {
 // logic
 // #######################################################################
 document.addEventListener('contextmenu', event => event.preventDefault());
-const turnUpVolume = document.querySelector(".turn-up-volume");
+const turnUpVolume = document.querySelector(".turn-up-volume")as HTMLElement;
 
 interface Question {
   category: string;
@@ -44,14 +54,17 @@ const soundEffects: string[] = [
   "questionLoad.mp3",
   "wrongAnswer.mp3",
   "correctAnswer.mp3",
+  "win.mp3",
 ];
 const audioDirectory = "soundEffects/";
 let audioFiles: Record<string, HTMLAudioElement> = {};
 
+let turnUpVolumeAnimation :any;
+
 document.addEventListener("DOMContentLoaded", async () => {
-    setTimeout(()=>{
-        turnUpVolume.classList.add("hide");
-    },2000);
+    turnUpVolumeAnimation=setInterval(()=>{
+        turnUpVolume.classList.toggle("hide");
+    },500);
 
   try {
     await loadAudioFiles();
@@ -114,7 +127,7 @@ let levelQuestionsList: Question[] = [];
 
 let currentLevel = 1;
 let selectedQuestion: Question | undefined;
-let amount = 10000;
+let amount :any = "40000";
 let timerInterval: number | undefined;
 let gameOver = false;
 let gameon = false;
@@ -130,7 +143,9 @@ function filterLevelQuestions(): void {
 }
 
 start.addEventListener("click", () => {
-  if (!selectedCategory) {
+    clearInterval(turnUpVolumeAnimation);
+    turnUpVolume.classList.add("hide");
+    if (!selectedCategory) {
     return;
   }
   categoryQuestions = (questions || []).filter(
@@ -210,6 +225,8 @@ options.forEach((option) => {
         currentLevelDiv?.classList.add("correct-answer");
         option.classList.add("correct-answer");
 
+        
+
         setTimeout(() => {
           correctAnswer();
         }, 1000);
@@ -280,11 +297,14 @@ function startTimer(duration: number): number {
   timerInterval = setInterval(() => {
     const seconds = parseInt(timer.toString(), 10);
     timerDisplay.textContent = seconds.toString();
-
+    if(timer<10){
+        timerDisplay.classList.add("low-time");
+    }
     if (--timer < 0) {
       clearInterval(timerInterval);
       timeOut();
     }
+    
   }, 1000);
 
   return timerInterval;
@@ -295,27 +315,39 @@ function stopTimer(): void {
 }
 
 function correctAnswer(): void {
+   
   playAudioWithPause("correctAnswer.mp3");
   displayBox.classList.remove("hide");
-  displayBox.classList.add("correct-answer-div-shadow");
 
   displayBox.querySelector(".title")!.textContent = "CORRECT ANSWER !";
-  displayBox.querySelector(".messege")!.textContent = `Score ${amount}`;
-  displayBox.querySelector(".ok-button")!.textContent = "Next Question";
+  displayBox.querySelector(".messege")!.textContent = `SCORE ${amount}`;
+  displayBox.querySelector(".ok-button")!.textContent = "NEXT";
 
+  //   console.log(document.getElementById(`l${currentLevel}`)?.textContent);
+  
   currentLevel++;
-  amount += 10000;
+  amount = document.getElementById(`l${currentLevel}`)?.textContent;
   resetQuestionAndOptions();
+  if(currentLevel==11){
+    displayBox.querySelector(".title")!.textContent = "YOU WON !";
+    displayBox.querySelector(".ok-button")!.textContent = "RESTART";
+    playAudioWithoutPause("win.mp3");
+    gameOver = true;
+
+
+
+  }
+    
 }
+
 
 function wrongAnswer(): void {
   playAudioWithPause("wrongAnswer.mp3");
   displayBox.classList.remove("hide");
-  displayBox.classList.add("wrong-answer-div-shadow");
 
   displayBox.querySelector(".title")!.textContent = "WRONG ANSWER !";
-  displayBox.querySelector(".messege")!.textContent = `Score ${amount - 10000}`;
-  displayBox.querySelector(".ok-button")!.textContent = "Restart Game";
+  displayBox.querySelector(".messege")!.textContent = `SCORE: ${amount}`;
+  displayBox.querySelector(".ok-button")!.textContent = "RESTART";
 
   gameOver = true;
   resetQuestionAndOptions();
@@ -325,14 +357,12 @@ function timeOut(): void {
   playAudioWithPause("wrongAnswer.mp3");
 
   displayBox.classList.remove("hide");
-  displayBox.classList.add("wrong-answer-div-shadow");
 
   displayBox.querySelector(".title")!.textContent = "TIME OUT";
-  displayBox.querySelector(".messege")!.textContent = `Score ${amount - 10000}`;
-  displayBox.querySelector(".ok-button")!.textContent = "Restart Game";
+  displayBox.querySelector(".messege")!.textContent = `SCORE: ${amount}`;
+  displayBox.querySelector(".ok-button")!.textContent = "Restart";
   gameOver = true;
 }
-
 // ########################################################################
 // audio code
 // ########################################################################
@@ -423,6 +453,7 @@ function lifelineFlipQuestion(): void {
     selectedQuestion = newQuestion;
 
     insertQuestion();
+    getRightOption();
   });
 }
 

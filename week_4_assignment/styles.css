@@ -557,21 +557,23 @@ justify-content: center;
 
 .unsupported-screen {
   visibility: hidden;
-}
-
-@media only screen and (max-width: 1080px) {
-  .unsupported-screen {
-    position: absolute;
-    visibility: visible;
-      display: flex;
+  position: absolute;
+  display: flex;
       justify-content: center;
       background-color: white;
       height: 100%;
       width: 100%;
       z-index: 1000;
+}
+.unsupported-screen h1 {
+  font-size: 18px; 
+}
+
+@media only screen and (max-width: 1080px) {
+  .unsupported-screen {
+    visibility: visible;
+      
   }
 
-  .unsupported-screen h1 {
-      font-size: 18px; /* Adjust the font size */
-  }
+ 
 }

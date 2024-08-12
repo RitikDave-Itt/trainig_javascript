@@ -110,7 +110,7 @@ let categoryQuestions = [];
 let levelQuestionsList = [];
 let currentLevel = 1;
 let selectedQuestion;
-let amount = "40000";
+let amount = "0";
 let timerInterval;
 let gameOver = false;
 let gameon = false;
@@ -250,7 +250,7 @@ function startTimer(duration) {
     timerInterval = setInterval(() => {
         const seconds = parseInt(timer.toString(), 10);
         timerDisplay.textContent = seconds.toString();
-        if (timer < 10) {
+        if (timer == 10) {
             timerDisplay.classList.add("low-time");
         }
         if (--timer < 0) {
@@ -261,10 +261,12 @@ function startTimer(duration) {
     return timerInterval;
 }
 function stopTimer() {
+    timerDisplay.classList.remove("low-time");
     clearInterval(timerInterval);
 }
 function correctAnswer() {
     var _a;
+    amount = (_a = document.getElementById(`l${currentLevel}`)) === null || _a === void 0 ? void 0 : _a.textContent;
     playAudioWithPause("correctAnswer.mp3");
     displayBox.classList.remove("hide");
     displayBox.querySelector(".title").textContent = "CORRECT ANSWER !";
@@ -272,7 +274,6 @@ function correctAnswer() {
     displayBox.querySelector(".ok-button").textContent = "NEXT";
     //   console.log(document.getElementById(`l${currentLevel}`)?.textContent);
     currentLevel++;
-    amount = (_a = document.getElementById(`l${currentLevel}`)) === null || _a === void 0 ? void 0 : _a.textContent;
     resetQuestionAndOptions();
     if (currentLevel == 11) {
         displayBox.querySelector(".title").textContent = "YOU WON !";

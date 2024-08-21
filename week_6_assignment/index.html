@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+    <title>Document</title>
+    <style>
+      /* Add any additional styles here if needed */
+    </style>
+  </head>
+
+  <body>
+    <div class="open-close-sidebar">
+    <div class="open-close-sidebar-button">&nbsp;&nbsp;》</div>
+</div>
+
+    <div class="hide input-todo">
+      <div class="input-box">
+        <form action="" class="form-todo">
+          <div class="heading">Input Task</div>
+          <input
+            type="text"
+            placeholder="Enter Task"
+            id="input-task"
+            name="task"
+            required
+          />
+          <input type="datetime-local" id="date-time" name="time" required />
+          <button type="submit">Add TODO</button>
+        </form>
+        <div class="close-input">X</div>
+      </div>
+    </div>
+
+    <div class="sidebar">
+      <div class="logo">
+        <!-- <img id ="logo-image" src="./images/logo.png" alt=""> -->
+        <div class="circle">
+          <div class="rect1"></div>
+          <div class="rect2"></div>
+          <div class="rect3"></div>
+          <div class="rect4"></div>
+          <div class="arrow">✔</div>
+        </div>
+      </div>
+
+        <div class="menu">
+            <div class="item all-tasks">All Tasks</div>
+            <div class="item ramaining-tasks">Remaining Tasks</div>
+            <div class="item completed-tasks">Completed Task</div>
+            <div class="item add-task-button">+</div>
+            <div class="item add-task-button fun">
+              <img src="./images/colorButton.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+      <div class="titles">
+        <div class="title status">Status</div>
+
+        <div class="title tasks-header">Tasks</div>
+        <div class="title date-header">Date</div>
+        <div class="title remaining-time-header">Remaining Time</div>
+      </div>
+      <div class="task-list">
+        
+        <template class="template">
+          <div class="task">
+           
+            <div class="task-status"><input type="checkbox" class="status-check-box"></div>
+            <div class="task-text"></div>
+            <div class="task-time"></div>
+            <div class="task-remaining-time"></div>
+            <div class="edit">
+              <button class="task-close">X</button>
+              <!-- <button class="task-edit">✎</button> -->
+            </div>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <div class="statistics">
+      <h3>Task Progress Report
+      </h3>
+      <div class="pie-chart"></div>
+    <div class="pie-chart-div">
+        <div><span class="completed-task-pie"></span> Completed <span id="completed-percent"></span></div>
+        <div><span class="incomplete-task-pie"></span> Remaining <span id="remaining-percent"></span></div>
+        
+    </div>
+    </div>
+  </body>
+</html>

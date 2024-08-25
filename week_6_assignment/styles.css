@@ -323,6 +323,7 @@ body {
 
 .titles {
     width: 90%;
+    padding: 1px 0px 0px 30px;
     display: flex;
     justify-content: space-evenly;
     /* position: fixed; */

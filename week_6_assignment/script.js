@@ -1,6 +1,142 @@
-// #########################################################################################
-// Styling
-// #########################################################################################
+
+
+
+
+
+class ListNode {
+  constructor(task) {
+    this.task = task;
+    this.next = null;
+  }
+}
+
+class LinkedList {
+  constructor() {
+    this.head = null;
+  }
+
+  
+  addTask(task) {
+    const newNode = new ListNode(task);
+    if (!this.head) {
+      this.head = newNode;
+      return;
+    }
+    let current = this.head;
+    while (current.next !== null) {
+      current = current.next;
+    }
+    current.next = newNode;
+  }
+
+  printList() {
+    let current = this.head;
+    while (current !== null) {
+      console.log(current.task); 
+      current = current.next;
+    }
+  }
+
+  
+  removeTask(taskId) {
+    if (!this.head) return;
+
+    if (this.head.task.id === taskId) {
+      this.head = this.head.next;
+      return;
+    }
+
+    let current = this.head;
+    while (current.next !== null && current.next.task.id !== taskId) {
+      current = current.next;
+    }
+
+    if (current.next !== null) {
+      current.next = current.next.next;
+    }
+  }
+
+  
+  toArray() {
+    const tasksArray = [];
+    let current = this.head;
+    while (current !== null) {
+      tasksArray.push(current.task);
+      current = current.next;
+    }
+    return tasksArray;
+  }
+
+  
+  findTask(taskId) {
+    let current = this.head;
+    while (current !== null) {
+      if (current.task.id === taskId) {
+        return current.task;
+      }
+      current = current.next;
+    }
+    return null;
+  }
+
+  
+  updateTaskCompletion(taskId, isComplete) {
+    let current = this.head;
+    while (current !== null) {
+      if (current.task.id === taskId) {
+        current.task.complete = isComplete;
+        // window.localStorage.setItem("todo", JSON.stringify(this.toArray()));
+        return;
+
+      }
+      current = current.next;
+    }
+  }
+}
+
+function convertArrayToLinkedList(tasksArray) {
+  const linkedList = new LinkedList();
+  tasksArray.forEach((task) => {
+    linkedList.addTask(task);
+  });
+  return linkedList;
+}
+
+
+function getCompletedTasksLinkedList() {
+  let completedTasksLinkedList = new LinkedList(); 
+  let current = taskLinkedList.head; 
+
+  while (current !== null) {
+    if (current.task.complete) {
+      // console.log(current.data);
+      
+      completedTasksLinkedList.addTask(current.task); 
+    }
+    current = current.next; 
+  }
+
+  return completedTasksLinkedList;
+}
+function getRemainingTasksLinkedList() {
+  let remainingTasksLinkedList = new LinkedList(); 
+  let current = taskLinkedList.head; 
+
+  while (current !== null) {
+    if (!current.task.complete) {
+      // console.log(current.data);
+      
+      remainingTasksLinkedList.addTask(current.task); 
+    }
+    current = current.next; 
+  }
+
+  return remainingTasksLinkedList;
+}
+
+
+
+
 
 const addTaskButton = document.getElementsByClassName("add-task-button")[0];
 const inputTodo = document.getElementsByClassName("input-todo")[0];
@@ -67,12 +203,12 @@ openCloseSidebarButton.addEventListener("click", () => {
   sidebar.classList.toggle("hide-sidebar");
 });
 
-// #########################################################################################
-// Custom Events
-// #########################################################################################
 
 
-// Custom event to notify about localStorage changes
+
+
+
+
 const localStorageChangeEvent = new Event('localStorageChange');
 
 const originalSetItem = window.localStorage.setItem;
@@ -93,15 +229,18 @@ window.localStorage.removeItem = removeItem;
 
 
 
-// #########################################################################################
-// Logic
-// #########################################################################################
+
+
+
 
 
 
 const formTodo = document.querySelector(".form-todo");
 let taskList = document.querySelector(".task-list");
-// const taskCard = document.querySelector(".task");
+
+let taskLinkedList = new LinkedList();
+
+
 
 document.addEventListener("DOMContentLoaded", (event) => {
   
@@ -109,11 +248,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
   let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
-  // console.log(taskList)
+  
 
-  localStorageTodo.forEach((task) => {
-    taskList.appendChild(createTaskCard(task));
-});
+  taskLinkedList = convertArrayToLinkedList(localStorageTodo);
+
+  // taskLinkedList.printList();
+  
+
+
+  let current = taskLinkedList.head;
+
+  while(current){
+
+    taskList.appendChild(createTaskCard(current.task));
+    console.log(current.task)
+    current = current.next;
+
+
+    
+  }
+  
 });
  taskList = document.querySelector(".task-list");
 
@@ -124,18 +278,14 @@ formTodo.addEventListener("submit", (event) => {
   let dataObject = Object.fromEntries(data.entries());
   dataObject["id"] = Date.now();
   dataObject["complete"] = false;
-  // console.log(dataObject);
+  
 
-  let localStorageTodo = window.localStorage.getItem("todo");
 
-  if (localStorageTodo) {
-    localStorageTodo = JSON.parse(localStorageTodo);
-    localStorageTodo.push(dataObject);
-  } else {
-    localStorageTodo = [dataObject];
-  }
+  taskLinkedList.addTask(dataObject);
 
-  window.localStorage.setItem("todo", JSON.stringify(localStorageTodo));
+  
+
+  window.localStorage.setItem("todo", JSON.stringify(taskLinkedList.toArray()));
   formTodo.reset();
 
   inputTodo.classList.toggle("hide");
@@ -146,14 +296,14 @@ formTodo.addEventListener("submit", (event) => {
 function createTaskCard(taskData) {
   const taskClone = taskTemplate.content.cloneNode(true);
   const taskElement = taskClone.querySelector(".task");
-  taskElement.id = taskData.id;
+  taskClone.id = taskData.id;
   const statusCheckBox = taskElement.querySelector(".status-check-box");
   const taskText = taskClone.querySelector(".task-text");
   const taskTime = taskClone.querySelector(".task-time");
   const taskRemainingTime = taskClone.querySelector(".task-remaining-time");
   const tickButton = taskClone.querySelector(".task-tick");
   const closeButton = taskClone.querySelector(".task-close");
-  // const editButton = taskClone.querySelector(".task-edit");
+  
 
   taskText.textContent = taskData.task;
   taskTime.textContent = taskData.time;
@@ -163,6 +313,8 @@ function createTaskCard(taskData) {
 
   statusCheckBox.addEventListener("change", () => {
     handleStatusCheckbox(taskData.id, statusCheckBox.checked);
+    document.dispatchEvent(localStorageChangeEvent); 
+
   });
 
   closeButton.addEventListener("click", () => {
@@ -170,29 +322,24 @@ function createTaskCard(taskData) {
     removeTaskFromLocalStorage(taskData);
   });
 
-  // editButton.addEventListener("click", () => {
-  //   editTask(taskData, taskClone.querySelector(".task"));
-  // });
+  
+  
+  
 
   return taskClone;
 }
 
 function handleStatusCheckbox(taskId, isChecked) {
-  let localStorageTodo = JSON.parse(window.localStorage.getItem("todo")) || [];
-  localStorageTodo = localStorageTodo.map((task) => {
-    if (task.id === taskId) {
-      task.complete = isChecked;
-    }
-    return task;
-  });
-  window.localStorage.setItem("todo", JSON.stringify(localStorageTodo));
+
+  taskLinkedList.updateTaskCompletion(taskId, isChecked);
+  window.localStorage.setItem("todo", JSON.stringify(taskLinkedList.toArray()));
+  
 }
 
 function removeTaskFromLocalStorage(taskData) {
-  let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
+taskLinkedList.removeTask(taskData.id);
 
-  localStorageTodo = localStorageTodo.filter((task) => taskData.id !== task.id);
-  window.localStorage.setItem("todo", JSON.stringify(localStorageTodo));
+window.localStorage.setItem("todo", JSON.stringify(taskLinkedList.toArray()));
 }
 
 function calculateRemainingTime(targetTime) {
@@ -216,54 +363,67 @@ function calculateRemainingTime(targetTime) {
 const completedTasks =  document.querySelector(".completed-tasks");
 
 completedTasks.addEventListener("click",(event)=>{
-  let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
 
-    const completedTasksList = localStorageTodo.filter((task)=>task.complete);
-    taskList.innerHTML = '';
-    completedTasksList.forEach((task) => {
-        taskList.appendChild(createTaskCard(task));
-    });
+  const completedTasksList = getCompletedTasksLinkedList(); 
+taskList.innerHTML = ''; 
 
+
+let current = completedTasksList.head; 
+
+while (current !== null) {
+  taskList.appendChild(createTaskCard(current.task)); 
+  current = current.next; 
+}
 })
 
 const remainingTasks =  document.querySelector(".ramaining-tasks");
 
 remainingTasks.addEventListener("click",(event)=>{
-  let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
+  
+  const remainingTaskLinkedList = getRemainingTasksLinkedList(); 
+taskList.innerHTML = ''; 
 
-    const remainingTasksList = localStorageTodo.filter((task)=>!task.complete);
-    taskList.innerHTML = '';
-    remainingTasksList.forEach((task) => {
-        taskList.appendChild(createTaskCard(task));
-    });
+
+let current = remainingTaskLinkedList.head; 
+
+while (current !== null) {
+  taskList.appendChild(createTaskCard(current.task)); 
+  current = current.next; 
+}
+  
+  
 
 })
 
 const allTasks =  document.querySelector(".all-tasks");
 
 allTasks.addEventListener("click",(event)=>{
-  let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
 
     taskList.innerHTML = '';
-    localStorageTodo.forEach((task) => {
-        taskList.appendChild(createTaskCard(task));
-    });
+    
+    let current = taskLinkedList.head;
+
+    while(current!==null){
+      taskList.appendChild(createTaskCard(current.task));
+      current = current.next;
+    }
     
    
 })
 
 document.addEventListener('localStorageChange', function(event) {
+  
   const completedPercentSpan = document.getElementById("completed-percent");
   const remainingPercentSpan = document.getElementById("remaining-percent");
 
 
   let localStorageTodo = JSON.parse(window.localStorage.getItem("todo"));
-  console.log(localStorageTodo);
+  // console.log(localStorageTodo);
   let completedTaskList = localStorageTodo.filter((task)=>!task.complete);
   
   let completedTaskCount = completedTaskList.length;
   let completepercent = Math.floor(((localStorageTodo.length - completedTaskCount)/localStorageTodo.length)*100);
-  console.log(completepercent);
+  // console.log(completepercent);
   document.documentElement.style.setProperty("--completed-percent", `${completepercent}%`);
 
   completedPercentSpan.textContent = `${completepercent}%`
@@ -273,7 +433,7 @@ document.addEventListener('localStorageChange', function(event) {
 })
 
 
-// task remaining sort
+
 
 const remainingTimeHeader = document.querySelector(".remaining-time-header");
 
@@ -306,7 +466,6 @@ remainingTimeHeader.addEventListener("click", () => {
   taskList.innerHTML = ''; 
   sortedTasks.forEach(taskElement => taskList.appendChild(taskElement)); 
 });
-
 
 
 

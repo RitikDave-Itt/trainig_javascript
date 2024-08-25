@@ -15,3 +15,6 @@ This repository contains assignments completed during my JavaScript training. Ea
 
 ### 📅 Week 4: Quiz Application
 - **[❓ Quiz Application](https://ritikdave-itt.github.io/trainig_javascript/week_4_assignment/index.html)**: A quiz app built using HTML, CSS, and JavaScript.
+
+### 📅 Week 6: Data Structures in JavaScript
+- **[🔗 To-Do List (Linked List)](https://ritikdave-itt.github.io/trainig_javascript/week_6_assignment/index.html)**: A to-do list application implemented using a linked list data structure. 
